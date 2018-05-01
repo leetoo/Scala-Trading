@@ -103,7 +103,8 @@ lazy val commonSettings = Seq(
   libraryDependencies += "com.msilb" %% "scalanda-v20" % "0.1.4",
   libraryDependencies += "io.circe" %% "circe-core" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-generic" % circeVersion,
-  libraryDependencies += "io.circe" %% "circe-parser" % circeVersion
+  libraryDependencies += "io.circe" %% "circe-parser" % circeVersion,
+  libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.18.0"
 
 )
 
