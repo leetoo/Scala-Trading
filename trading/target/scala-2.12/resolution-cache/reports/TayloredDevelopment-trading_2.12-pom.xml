@@ -7,7 +7,7 @@
 		revision="18.02.26.2"
 		conf="pom"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, bundle, configuration, windows, linux, docker, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, dev-mode, api-tools"
-		date="20180425155243"/>
+		date="20180501142314"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

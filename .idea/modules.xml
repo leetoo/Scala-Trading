@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/backtest.iml" filepath="$PROJECT_DIR$/.idea/modules/backtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/backtest-build.iml" filepath="$PROJECT_DIR$/.idea/modules/backtest-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.iml" filepath="$PROJECT_DIR$/.idea/modules/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-build.iml" filepath="$PROJECT_DIR$/.idea/modules/core-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/deal.iml" filepath="$PROJECT_DIR$/.idea/modules/deal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/deal-build.iml" filepath="$PROJECT_DIR$/.idea/modules/deal-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/order.iml" filepath="$PROJECT_DIR$/.idea/modules/order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-build.iml" filepath="$PROJECT_DIR$/.idea/modules/order-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing-build.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy-build.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading.iml" filepath="$PROJECT_DIR$/.idea/modules/trading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading-build.iml" filepath="$PROJECT_DIR$/.idea/modules/trading-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradingApi.iml" filepath="$PROJECT_DIR$/.idea/modules/tradingApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradingApi-build.iml" filepath="$PROJECT_DIR$/.idea/modules/tradingApi-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/valuation.iml" filepath="$PROJECT_DIR$/.idea/modules/valuation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/valuation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/valuation-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/versioning.iml" filepath="$PROJECT_DIR$/.idea/modules/versioning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/versioning-build.iml" filepath="$PROJECT_DIR$/.idea/modules/versioning-build.iml" />
+    </modules>
+  </component>
+</project>

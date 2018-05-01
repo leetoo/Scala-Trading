@@ -8,6 +8,9 @@ import sbt.Keys.scalaVersion
 //Versions
 val sparkVersion = "2.2.0"
 val globalVersion = "18.02.26.2"
+val circeVersion = "0.9.3"
+
+
 
 //Organization
 organization in ThisBuild := "TayloredDevelopment"
@@ -21,7 +24,6 @@ val globalBuildInfoPackage = "fraxses.gateway.version"
 
 //Lagom Options
 lagomServiceLocatorEnabled in ThisBuild := false
-lagomCassandraEnabled in ThisBuild := false
 lagomServicesPortRange in ThisBuild := PortRange(60005, 60015)
 
 
@@ -90,17 +92,19 @@ lazy val setBatParams = {
 //Core Libraries
 lazy val commonSettings = Seq(
   libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.2.5" % "provided",
-  libraryDependencies += "org.apache.curator" % "curator-x-discovery" % "4.0.1",
   libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.1",
   libraryDependencies += "co.fs2" %% "fs2-core" % "0.10.1",
   libraryDependencies += "co.fs2" %% "fs2-io" % "0.10.1",
   libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3",
   libraryDependencies += "io.monix" %% "monix" % "3.0.0-RC1",
   libraryDependencies += "org.typelevel" %% "cats-effect" % "1.0.0-RC",
-  libraryDependencies +=  "org.apache.kafka" %% "kafka" % "0.11.0.1",
-  libraryDependencies +=  "org.apache.kafka" % "kafka-clients" % "0.11.0.1",
-  libraryDependencies +=  "io.bfil" %% "rx-kafka-core" % "0.2.0"
-  
+  libraryDependencies +=  "io.bfil" %% "rx-kafka-core" % "0.2.0",
+  libraryDependencies += "org.reactivemongo" %% "reactivemongo" % "0.13.0",
+  libraryDependencies += "com.msilb" %% "scalanda-v20" % "0.1.4",
+  libraryDependencies += "io.circe" %% "circe-core" % circeVersion,
+  libraryDependencies += "io.circe" %% "circe-generic" % circeVersion,
+  libraryDependencies += "io.circe" %% "circe-parser" % circeVersion
+
 )
 
 
@@ -185,14 +189,23 @@ lazy val evaluation =
       version := globalVersion,
     )
     .settings(commonSettings: _*)
-	
+
+lazy val backtest =
+  (project in file("backtest"))
+    .dependsOn(core)
+    .settings(
+      version := globalVersion,
+    )
+    .settings(commonSettings: _*)
 	
 lazy val tradingApi =
   (project in file("tradingApi"))
     .dependsOn(core)
     .settings(
       version := globalVersion,
-      libraryDependencies += lagomScaladslApi
+      libraryDependencies += lagomScaladslApi,
+      libraryDependencies += lagomJavadslKafkaBroker,
+      libraryDependencies += lagomJavadslPersistenceCassandra
     )
     .settings(commonSettings: _*)
 
@@ -207,7 +220,9 @@ lazy val trading =
     .settings(
       packageName := "trading",
       version := globalVersion,
-      lagomServicePort := 60005
+      lagomServicePort := 60005,
+      libraryDependencies += lagomJavadslKafkaBroker,
+      libraryDependencies += lagomJavadslPersistenceCassandra
     )
     .settings(commonSettings: _*)
     .settings(setBashParams: _*)

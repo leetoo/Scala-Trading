@@ -4,7 +4,7 @@
 		module="tradingapi_2.12"
 		revision="18.02.26.2"
 		status="integration"
-		publication="20180425155240"
+		publication="20180501142259"
 	>
 		<description>
 		tradingApi
@@ -34,16 +34,20 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="TayloredDevelopment" name="core_2.12" rev="18.02.26.2" conf="compile->default(compile)"/>
 		<dependency org="com.lightbend.lagom" name="lagom-scaladsl-api_2.12" rev="1.4.0" conf="compile->default(compile)"/>
+		<dependency org="com.lightbend.lagom" name="lagom-javadsl-kafka-broker_2.12" rev="1.4.0" conf="compile->default(compile)"/>
+		<dependency org="com.lightbend.lagom" name="lagom-javadsl-persistence-cassandra_2.12" rev="1.4.0" conf="compile->default(compile)"/>
 		<dependency org="com.softwaremill.macwire" name="macros_2.12" rev="2.2.5" conf="provided->default(compile)"/>
-		<dependency org="org.apache.curator" name="curator-x-discovery" rev="4.0.1" conf="compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-core_2.12" rev="1.0.1" conf="compile->default(compile)"/>
 		<dependency org="co.fs2" name="fs2-core_2.12" rev="0.10.1" conf="compile->default(compile)"/>
 		<dependency org="co.fs2" name="fs2-io_2.12" rev="0.10.1" conf="compile->default(compile)"/>
 		<dependency org="com.chuusai" name="shapeless_2.12" rev="2.3.3" conf="compile->default(compile)"/>
 		<dependency org="io.monix" name="monix_2.12" rev="3.0.0-RC1" conf="compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-effect_2.12" rev="1.0.0-RC" conf="compile->default(compile)"/>
-		<dependency org="org.apache.kafka" name="kafka_2.12" rev="0.11.0.1" conf="compile->default(compile)"/>
-		<dependency org="org.apache.kafka" name="kafka-clients" rev="0.11.0.1" conf="compile->default(compile)"/>
 		<dependency org="io.bfil" name="rx-kafka-core_2.12" rev="0.2.0" conf="compile->default(compile)"/>
+		<dependency org="org.reactivemongo" name="reactivemongo_2.12" rev="0.13.0" conf="compile->default(compile)"/>
+		<dependency org="com.msilb" name="scalanda-v20_2.12" rev="0.1.4" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-core_2.12" rev="0.9.3" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-generic_2.12" rev="0.9.3" conf="compile->default(compile)"/>
+		<dependency org="io.circe" name="circe-parser_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
