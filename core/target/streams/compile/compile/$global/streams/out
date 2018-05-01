@@ -1,0 +1,13 @@
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\ContractType.scala:3:47: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\ExpiryType.scala:3:47: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\InstrumentType.scala:3:47: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\Side.scala:3:47: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
