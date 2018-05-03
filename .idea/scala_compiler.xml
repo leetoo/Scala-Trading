@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="trading_scala_3851" />
-    <profile name="sbt 2" modules="evaluation,pricing,trading,tradingApi,versioning,strategy,core,order,backtest,valuation,deal">
+    <profile name="sbt 2" modules="tradingApi,deal,pricing,versioning,trading,valuation,order,backtest,evaluation,strategy,core">
       <option name="reflectiveCalls" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />

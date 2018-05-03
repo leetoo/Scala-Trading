@@ -7,7 +7,7 @@
 		revision="18.02.26.2"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, bundle, configuration, windows, linux, docker, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, dev-mode, api-tools"
-		date="20180503115549"/>
+		date="20180503193025"/>
 	<dependencies>
 		<module organisation="com.typesafe.conductr" name="lagom14-scala-conductr-bundle-lib_2.12">
 			<revision name="2.2.0" status="release" pubdate="20180129152625" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://conductr.lightbend.com/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="185">
@@ -208,7 +208,7 @@
 			</revision>
 		</module>
 		<module organisation="TayloredDevelopment" name="tradingapi_2.12">
-			<revision name="18.02.26.2" status="integration" pubdate="20180503115538" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="52">
+			<revision name="18.02.26.2" status="integration" pubdate="20180503192855" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="52">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="TayloredDevelopment" name="trading_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="18.02.26.2" rev-constraint-default="18.02.26.2" rev-constraint-dynamic="18.02.26.2" callerrev="18.02.26.2"/>
 				<artifacts>
@@ -2069,9 +2069,9 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.25" status="release" pubdate="20170316163632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="126">
+			<revision name="1.7.25" status="release" pubdate="20170316123632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="126">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5250" time="0" location="C:\Users\jason\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
+				<metadata-artifact status="no" details="" size="5190" time="0" location="C:\Users\jason\.ivy2\cache\org.slf4j\slf4j-api\ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jason/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/ivys/ivy.xml"/>
 				<caller organisation="com.101tec" name="zkclient" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="0.10"/>
 				<caller organisation="org.apache.kafka" name="kafka-clients" conf="compile, runtime" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="0.10.2.1"/>
 				<caller organisation="com.lightbend.lagom" name="lagom-client_2.12" conf="compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.4.0"/>
@@ -2092,7 +2092,7 @@
 				<caller organisation="com.lightbend.lagom" name="lagom-logback_2.12" conf="default, compile, runtime, master" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="1.4.0"/>
 				<artifacts>
 					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="41203" time="0" location="C:\Users\jason\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.25.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar"/>
+						<origin-location is-local="false" location="file:/C:/Users/jason/.sbt/preloaded/org.slf4j/slf4j-api/1.7.25/jars/slf4j-api.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2241,7 +2241,7 @@
 			</revision>
 		</module>
 		<module organisation="TayloredDevelopment" name="core_2.12">
-			<revision name="18.02.26.2" status="integration" pubdate="20180503115536" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="18.02.26.2" status="integration" pubdate="20180503192855" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="TayloredDevelopment" name="tradingapi_2.12" conf="compile" rev="18.02.26.2" rev-constraint-default="18.02.26.2" rev-constraint-dynamic="18.02.26.2" callerrev="18.02.26.2"/>
 				<caller organisation="TayloredDevelopment" name="trading_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="18.02.26.2" rev-constraint-default="18.02.26.2" rev-constraint-dynamic="18.02.26.2" callerrev="18.02.26.2"/>
@@ -2945,16 +2945,16 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.4" status="release" pubdate="20171011032224" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+			<revision name="2.12.4" status="release" pubdate="20171011082224" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2814" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jason/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2670" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.pom"/>
 				<caller organisation="com.softwaremill.macwire" name="macros_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.2.5"/>
 				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.6.2"/>
 				<caller organisation="com.typesafe.play" name="play_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.11"/>
 				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.8"/>
 				<artifacts>
 					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3587892" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.4.jar">
-						<origin-location is-local="false" location="file:/C:/Users/jason/.sbt/preloaded/org.scala-lang/scala-reflect/2.12.4/jars/scala-reflect.jar"/>
+						<origin-location is-local="false" location="UNKNOWN"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -3031,7 +3031,7 @@
 			</revision>
 		</module>
 		<module organisation="TayloredDevelopment" name="versioning_2.12">
-			<revision name="18.02.26.2" status="integration" pubdate="20180503115528" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
+			<revision name="18.02.26.2" status="integration" pubdate="20180503192830" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="2">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="TayloredDevelopment" name="core_2.12" conf="compile" rev="18.02.26.2" rev-constraint-default="18.02.26.2" rev-constraint-dynamic="18.02.26.2" callerrev="18.02.26.2"/>
 				<artifacts>
@@ -3039,9 +3039,9 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.4" status="release" pubdate="20171011030456" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+			<revision name="2.12.4" status="release" pubdate="20171011080456" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2642" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/Users/jason/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/ivys/ivy.xml"/>
+				<metadata-artifact status="no" details="" size="2501" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-library\ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.pom"/>
 				<caller organisation="com.typesafe.akka" name="akka-parsing_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="10.0.11"/>
 				<caller organisation="com.typesafe" name="ssl-config-core_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.2.1"/>
 				<caller organisation="org.typelevel" name="cats-core_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.1.0"/>
@@ -3160,7 +3160,7 @@
 				<caller organisation="com.typesafe.play" name="play-akka-http-server_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.11"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5247152" time="0" location="C:\Users\jason\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar">
-						<origin-location is-local="false" location="file:/C:/Users/jason/.sbt/preloaded/org.scala-lang/scala-library/2.12.4/jars/scala-library.jar"/>
+						<origin-location is-local="false" location="UNKNOWN"/>
 					</artifact>
 				</artifacts>
 			</revision>

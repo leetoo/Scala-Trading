@@ -7,8 +7,8 @@ import io.circe.generic.extras.semiauto.{deriveEnumerationDecoder, deriveEnumera
 sealed trait ContractType
 
 object ContractType{
-  case object Spreadbet extends ContractType
-  case object Cfd extends ContractType
+  final case object Spreadbet extends ContractType
+  final case object Cfd extends ContractType
 
   implicit val decodeContractType: Decoder[ContractType] = deriveEnumerationDecoder
   implicit val encodeContractType: Encoder[ContractType] = deriveEnumerationEncoder
