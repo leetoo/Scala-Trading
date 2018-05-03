@@ -5,6 +5,8 @@
     <output-test url="file://$MODULE_DIR$/../../versioning/target/scala-2.12/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../versioning">
+      <sourceFolder url="file://$MODULE_DIR$/../../versioning/src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../versioning/src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../versioning/target/scala-2.12/src_managed/main" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../versioning/target/scala-2.12/src_managed/test" isTestSource="true" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../versioning/target" />

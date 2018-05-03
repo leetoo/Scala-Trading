@@ -1,13 +1,11 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\ContractType.scala:3:47: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\ExpiryType.scala:3:47: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\InstrumentType.scala:3:47: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\objects\Side.scala:3:47: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.msilb.scalandav20.model.instrument.CandlestickGranularity[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                              ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mfour warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\domain\Timestamp.scala:6:17: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport io.circe._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\domain\Timestamp.scala:8:41: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport io.circe.generic.extras.semiauto._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\domain\Timestamp.scala:9:24: macro annotation could not be expanded (the most common reason for that is that you need to enable the macro paradise plugin; another possibility is that you try to use macro annotation in the same compilation run that defines it)[0m
+[0m[[0m[31merror[0m] [0m[0m @JsonCodec case class Timestamp(utc: ZonedDateTime, system: ZonedDateTime)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

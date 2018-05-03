@@ -4,7 +4,7 @@
 		module="trading_2.12"
 		revision="18.02.26.2"
 		status="integration"
-		publication="20180501202017"
+		publication="20180503115549"
 	>
 		<description>
 		trading
@@ -68,6 +68,5 @@
 		<dependency org="io.circe" name="circe-core_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-generic_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-parser_2.12" rev="0.9.3" conf="compile->default(compile)"/>
-		<dependency org="com.github.nscala-time" name="nscala-time_2.12" rev="2.18.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

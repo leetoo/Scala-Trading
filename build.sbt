@@ -9,8 +9,7 @@ import sbt.Keys.scalaVersion
 val sparkVersion = "2.2.0"
 val globalVersion = "18.02.26.2"
 val circeVersion = "0.9.3"
-
-
+val paradiseVersion = "2.1.0"
 
 //Organization
 organization in ThisBuild := "TayloredDevelopment"
@@ -21,7 +20,7 @@ scalaVersion in ThisBuild := "2.12.4"
 val globalBuildInfoKeys =
   Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
 val globalBuildInfoPackage = "fraxses.gateway.version"
-
+addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
 //Lagom Options
 lagomServiceLocatorEnabled in ThisBuild := false
 lagomServicesPortRange in ThisBuild := PortRange(60005, 60015)
@@ -104,7 +103,7 @@ lazy val commonSettings = Seq(
   libraryDependencies += "io.circe" %% "circe-core" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-generic" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-parser" % circeVersion,
-  libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.18.0"
+
 
 )
 
