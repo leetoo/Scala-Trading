@@ -4,7 +4,7 @@
 		module="trading_2.12"
 		revision="18.02.26.2"
 		status="integration"
-		publication="20180503193025"
+		publication="20180504102453"
 	>
 		<description>
 		trading
@@ -68,5 +68,7 @@
 		<dependency org="io.circe" name="circe-core_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-generic_2.12" rev="0.9.3" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-parser_2.12" rev="0.9.3" conf="compile->default(compile)"/>
+		<dependency org="org.scalactic" name="scalactic_2.12" rev="3.0.0" conf="compile->default(compile)"/>
+		<dependency org="org.scalatest" name="scalatest_2.12" rev="3.0.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

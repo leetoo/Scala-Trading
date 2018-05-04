@@ -1,22 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:4:26: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.google.inject.AbstractModule[0m
-[0m[[0m[33mwarn[0m] [0m[0m                         ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:5:41: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.lightbend.lagom.scaladsl.api.ServiceLocator[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:8:45: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.lightbend.lagom.scaladsl.devmode.LagomDevModeComponents[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                            ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:16:18: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport play.api.{Configuration, Environment}[0m
-[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:16:33: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport play.api.{Configuration, Environment}[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingApplicationLoader.scala:18:45: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport com.lightbend.lagom.scaladsl.devmode.LagomDevModeComponents[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                            ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingServiceImpl.scala:12:75: parameter value ec in class TradingServiceImpl is never used[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                lifecycle: ApplicationLifecycle)(implicit ec: ExecutionContext)  extends TradingService {[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                                                          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m7 warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
