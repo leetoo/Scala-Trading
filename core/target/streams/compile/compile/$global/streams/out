@@ -1,4 +1,32 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\collections\CircularBuffer.scala:2:25: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0mimport scala.collection.mutable[0m
-[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayRangeTrigger.scala:3:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.{LocalDateTime, LocalTime}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayTrigger.scala:3:27: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.temporal.TemporalField[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\Trigger.scala:7:62: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport uk.co.tradingdevelopment.trading.scala.operators.Pipe._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayRangeTrigger.scala:20:35: value provider in class TimeOfDayRangeTrigger does nothing other than call itself recursively[0m
+[0m[[0m[33mwarn[0m] [0m[0m  override val provider: String = provider[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayTrigger.scala:20:35: value provider in class TimeOfDayTrigger does nothing other than call itself recursively[0m
+[0m[[0m[33mwarn[0m] [0m[0m  override val provider: String = provider[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m5 warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayRangeTrigger.scala:3:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.{LocalDateTime, LocalTime}[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayTrigger.scala:3:27: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport java.time.temporal.TemporalField[0m
+[0m[[0m[33mwarn[0m] [0m[0m                          ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\Trigger.scala:7:62: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport uk.co.tradingdevelopment.trading.scala.operators.Pipe._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                                             ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayRangeTrigger.scala:20:35: value provider in class TimeOfDayRangeTrigger does nothing other than call itself recursively[0m
+[0m[[0m[33mwarn[0m] [0m[0m  override val provider: String = provider[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\core\src\main\scala\uk\co\tayloreddevelopment\trading\scala\trigger\TimeOfDayTrigger.scala:20:35: value provider in class TimeOfDayTrigger does nothing other than call itself recursively[0m
+[0m[[0m[33mwarn[0m] [0m[0m  override val provider: String = provider[0m
+[0m[[0m[33mwarn[0m] [0m[0m                                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0m5 warnings found[0m

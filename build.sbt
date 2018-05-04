@@ -139,64 +139,138 @@ lazy val core =
   (project in file("core"))
     .dependsOn(versioning)
     .settings(
-      version := globalVersion,
+      packageName := "core",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val pricing =
   (project in file("pricing"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "pricing",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val valuation =
   (project in file("valuation"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "valuation",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val strategy =
   (project in file("strategy"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "strategy",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val order =
   (project in file("order"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "order",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 	
 lazy val deal =
   (project in file("deal"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "deal",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 	
 lazy val evaluation =
   (project in file("evaluation"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "evaluation",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val backtest =
   (project in file("backtest"))
     .dependsOn(core)
+    .enablePlugins(
+      ClasspathJarPlugin,
+      LinuxPlugin,
+      RpmPlugin,
+      DebianPlugin,
+      WindowsPlugin)
     .settings(
-      version := globalVersion,
+      packageName := "backtest",
+      version := globalVersion
     )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
     .settings(commonSettings: _*)
 	
 lazy val tradingApi =
