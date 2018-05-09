@@ -14,14 +14,14 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-build.iml" filepath="$PROJECT_DIR$/.idea/modules/order-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing-build.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root.iml" filepath="$PROJECT_DIR$/.idea/modules/root.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/root-build.iml" filepath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy-build.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading.iml" filepath="$PROJECT_DIR$/.idea/modules/trading.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading-build.iml" filepath="$PROJECT_DIR$/.idea/modules/trading-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradingApi.iml" filepath="$PROJECT_DIR$/.idea/modules/tradingApi.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/tradingApi-build.iml" filepath="$PROJECT_DIR$/.idea/modules/tradingApi-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading_scala.iml" filepath="$PROJECT_DIR$/.idea/modules/trading_scala.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading_scala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/trading_scala-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/valuation.iml" filepath="$PROJECT_DIR$/.idea/modules/valuation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/valuation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/valuation-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/versioning.iml" filepath="$PROJECT_DIR$/.idea/modules/versioning.iml" />

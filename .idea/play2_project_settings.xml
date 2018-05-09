@@ -6,7 +6,7 @@
         <entry key="trading_scala">
           <value>
             <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.12/jars/play_2.12-2.6.11.jar" />
+              <option name="playDistrPath" value="$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.12/2.6.11/play_2.12-2.6.11.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>

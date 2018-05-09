@@ -20,11 +20,11 @@ scalaVersion in ThisBuild := "2.12.4"
 val globalBuildInfoKeys =
   Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
 val globalBuildInfoPackage = "fraxses.gateway.version"
-addCompilerPlugin("org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
+addCompilerPlugin(
+  "org.scalamacros" % "paradise" % paradiseVersion cross CrossVersion.full)
 //Lagom Options
 lagomServiceLocatorEnabled in ThisBuild := false
 lagomServicesPortRange in ThisBuild := PortRange(60005, 60015)
-
 
 //SBT Build Options
 updateOptions := updateOptions.value.withCachedResolution(true)
@@ -74,6 +74,18 @@ lazy val setDummyConfiguration = {
 
 }
 
+
+
+//Packaging Settings
+enablePlugins(JavaAppPackaging)
+enablePlugins(ClasspathJarPlugin)
+enablePlugins(UniversalPlugin)
+enablePlugins(LinuxPlugin)
+enablePlugins(RpmPlugin)
+enablePlugins(DebianPlugin)
+enablePlugins(WindowsPlugin)
+
+
 lazy val setBashParams = {
   bashScriptExtraDefines ++= Seq(
     """addJava "-Xmx4g"""",
@@ -97,17 +109,17 @@ lazy val commonSettings = Seq(
   libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3",
   libraryDependencies += "io.monix" %% "monix" % "3.0.0-RC1",
   libraryDependencies += "org.typelevel" %% "cats-effect" % "1.0.0-RC",
-  libraryDependencies +=  "io.bfil" %% "rx-kafka-core" % "0.2.0",
+  libraryDependencies += "io.bfil" %% "rx-kafka-core" % "0.2.0",
   libraryDependencies += "org.reactivemongo" %% "reactivemongo" % "0.13.0",
+  libraryDependencies += "org.reactivemongo" %% "reactivemongo-akkastream" % "0.13.0",
+  libraryDependencies += "com.typesafe.akka" %% "akka-stream" % "2.5.12",
   libraryDependencies += "com.msilb" %% "scalanda-v20" % "0.1.4",
   libraryDependencies += "io.circe" %% "circe-core" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-generic" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-parser" % circeVersion,
   libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0"
-
 )
-
 
 lazy val packageSettings = Seq(
   //Linux General Settings
@@ -128,7 +140,8 @@ lazy val packageSettings = Seq(
 
 lazy val versioning =
   (project in file("versioning"))
-    .enablePlugins(BuildInfoPlugin)
+    .enablePlugins(BuildInfoPlugin,
+                   LagomScala)
     .settings(
       version := globalVersion,
       buildInfoKeys := globalBuildInfoKeys,
@@ -138,6 +151,7 @@ lazy val versioning =
 lazy val core =
   (project in file("core"))
     .dependsOn(versioning)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "core",
       version := globalVersion
@@ -150,15 +164,11 @@ lazy val core =
 lazy val pricing =
   (project in file("pricing"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "pricing",
-      version := globalVersion
+      version := globalVersion,
+      setConfiguration
     )
     .settings(setBashParams: _*)
     .settings(setBatParams: _*)
@@ -168,12 +178,7 @@ lazy val pricing =
 lazy val valuation =
   (project in file("valuation"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "valuation",
       version := globalVersion
@@ -186,12 +191,7 @@ lazy val valuation =
 lazy val strategy =
   (project in file("strategy"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "strategy",
       version := globalVersion
@@ -204,12 +204,7 @@ lazy val strategy =
 lazy val order =
   (project in file("order"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "order",
       version := globalVersion
@@ -218,16 +213,11 @@ lazy val order =
     .settings(setBatParams: _*)
     .settings(packageSettings: _*)
     .settings(commonSettings: _*)
-	
+
 lazy val deal =
   (project in file("deal"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "deal",
       version := globalVersion
@@ -236,16 +226,11 @@ lazy val deal =
     .settings(setBatParams: _*)
     .settings(packageSettings: _*)
     .settings(commonSettings: _*)
-	
+
 lazy val evaluation =
   (project in file("evaluation"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "evaluation",
       version := globalVersion
@@ -258,12 +243,7 @@ lazy val evaluation =
 lazy val backtest =
   (project in file("backtest"))
     .dependsOn(core)
-    .enablePlugins(
-      ClasspathJarPlugin,
-      LinuxPlugin,
-      RpmPlugin,
-      DebianPlugin,
-      WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "backtest",
       version := globalVersion
@@ -272,7 +252,7 @@ lazy val backtest =
     .settings(setBatParams: _*)
     .settings(packageSettings: _*)
     .settings(commonSettings: _*)
-	
+
 lazy val tradingApi =
   (project in file("tradingApi"))
     .dependsOn(core)
@@ -286,12 +266,7 @@ lazy val tradingApi =
 
 lazy val trading =
   (project in file("trading"))
-    .enablePlugins(LagomScala,
-                   ClasspathJarPlugin,
-                   LinuxPlugin,
-                   RpmPlugin,
-                   DebianPlugin,
-                   WindowsPlugin)
+    .enablePlugins(LagomScala)
     .settings(
       packageName := "trading",
       version := globalVersion,
@@ -305,7 +280,7 @@ lazy val trading =
     .settings(packageSettings: _*)
     .dependsOn(core, tradingApi)
 
-lazy val root = (project in file("."))
-  .settings(name := "trading_scala")
-  .aggregate(versioning, core, tradingApi, trading)
-  .settings(commonSettings: _*)
+//lazy val root = (project in file("."))
+//  .settings(name := "trading_scala")
+//  .aggregate(versioning, core, tradingApi, trading, pricing)
+//  .settings(commonSettings: _*)

@@ -1,18 +1,20 @@
 package uk.co.tayloreddevelopment.trading.scala
 
-import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
+import akka.actor.{ ActorSystem, Props}
+import uk.co.tayloreddevelopment.trading.scala.Actors.PricingActor
+import scala.io.StdIn._
 
-//object Pricing {
-//  def main(args: Array[String]): Unit = {
-//
-//  }
-//}
 
-object Pricing {
+object Pricing extends App {
 
   val system: ActorSystem = ActorSystem("pricing")
 
-  def main(args: Array[String]): Unit = {}
-  println("Actor system created")
 
+  println("Actor system created")
+  println(system)
+  val pricingActor = system.actorOf(Props[PricingActor])
+
+  println("Press any key to quit")
+  val input = readLine
+  System.exit(0)
 }
