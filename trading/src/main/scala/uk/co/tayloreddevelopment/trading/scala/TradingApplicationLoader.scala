@@ -2,10 +2,11 @@ package uk.co.tradingdevelopment.trading.scala
 
 
 import com.lightbend.lagom.scaladsl.server.{ LagomApplication, LagomApplicationContext, LagomApplicationLoader }
-import com.softwaremill.macwire._
-import com.typesafe.conductr.bundlelib.lagom.scaladsl.ConductRApplicationComponents
-import play.api.libs.ws.ahc.AhcWSComponents
 import com.lightbend.lagom.scaladsl.server.status.MetricsServiceComponents
+import com.lightbend.lagom.scaladsl.api.ServiceLocator
+import com.lightbend.lagom.scaladsl.api.ServiceLocator.NoServiceLocator
+import play.api.libs.ws.ahc.AhcWSComponents
+import com.softwaremill.macwire._
 
 abstract class TradingApplication(context: LagomApplicationContext)
   extends LagomApplication(context) with AhcWSComponents
@@ -17,6 +18,8 @@ abstract class TradingApplication(context: LagomApplicationContext)
 
 
 class TradingLoader extends LagomApplicationLoader {
-  override def load(context: LagomApplicationContext): LagomApplication = new TradingApplication(context) with ConductRApplicationComponents
+  override def load(context: LagomApplicationContext): LagomApplication = new TradingApplication(context) {
+    override def serviceLocator: ServiceLocator = NoServiceLocator
+  }
   override def describeService = Some(readDescriptor[TradingService])
 }

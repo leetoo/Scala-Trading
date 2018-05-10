@@ -1,0 +1,287 @@
+[0m[[0minfo[0m] [0mUpdating {file:/E:/Dev/GitHub/Trading_Scala/}trading_scala...[0m
+[0m[[0mdebug[0m] [0m:: building artificial module descriptors from TayloredDevelopment#trading_scala_2.12;18.02.26.2[0m
+[0m[[0mdebug[0m] [0m::: dd: dependency: org.scala-lang#scala-compiler;2.12.4 {scala-tool=[default, optional(default)]} (artifacts: )[0m
+[0m[[0mdebug[0m] [0m::: dd: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.4 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.4 {compile=[default(compile)]}) (artifacts: )[0m
+[0m[[0mdebug[0m] [0m::: dd: dependency: org.scalamacros#paradise_2.12.4;2.1.0 {plugin=[default(compile)]} (artifacts: )[0m
+[0m[[0mdebug[0m] [0mparsing C:\Users\jason\.sbt\0.13\dependency\module\static\org.scala-lang\scala-compiler\2.12.4_temp-resolve-e6b61e2d1bca99bc7c7a637f358a1f5b3866f0f9\graphs\graph.json[0m
+[0m[[0mdebug[0m] [0mparsing C:\Users\jason\.sbt\0.13\dependency\module\static\org.scala-lang\scala-library\2.12.4_temp-resolve-44d0f7ce91447d6f0920c50ccdad2ee2d16748c1\graphs\graph.json[0m
+[0m[[0mdebug[0m] [0m:: call ivy resolution: dependency: org.scalamacros#paradise_2.12.4;2.1.0 {plugin=[default(compile)]}[0m
+[0m[[0minfo[0m] [0m:: resolving dependencies :: org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0[0m
+[0m[[0minfo[0m] [0m	confs: [universal, universal-docs, universal-src, windows, linux, docker, compile, runtime, test, provided, optional, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
+[0m[[0mdebug[0m] [0m	validate = true[0m
+[0m[[0mdebug[0m] [0m	refresh = false[0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'universal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [universal][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'universal-docs'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [universal-docs][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'universal-src'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [universal-src][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'windows'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [windows][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'linux'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [linux][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docker'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [docker][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'provided'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'optional'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [optional][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'rpm'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [rpm][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [linux][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'debian'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [debian][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [linux][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'compile-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'runtime-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [runtime-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [optional][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'test-internal'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [test-internal][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [test][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [optional][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [provided][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'plugin'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [plugin][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0->org.scalamacros#paradise_2.12.4;2.1.0 [plugin->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scalamacros#paradise_2.12.4;2.1.0 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scalamacros#paradise_2.12.4;2.1.0 {plugin=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scalamacros#paradise_2.12.4;2.1.0[0m
+[0m[[0minfo[0m] [0m	found org.scalamacros#paradise_2.12.4;2.1.0 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0->org.scalamacros#paradise_2.12.4;2.1.0 [plugin->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0->org.scalamacros#paradise_2.12.4;2.1.0 [plugin->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.12.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.12.4[0m
+[0m[[0minfo[0m] [0m	found org.scala-lang#scala-compiler;2.12.4 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.12.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.12.4[0m
+[0m[[0minfo[0m] [0m	found org.scala-lang#scala-library;2.12.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0m	[2.12.4] org.scala-lang#scala-library;2.12.4[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.12.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.12.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.12.4[0m
+[0m[[0minfo[0m] [0m	found org.scala-lang#scala-reflect;2.12.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0m	[2.12.4] org.scala-lang#scala-reflect;2.12.4[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.12.4->org.scala-lang#scala-library;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.12.4->org.scala-lang#scala-library;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.12.4->org.scala-lang#scala-library;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang.modules#scala-xml_2.12;1.0.6 [compile->master(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.12;1.0.6 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.12;1.0.6 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.12;1.0.6[0m
+[0m[[0minfo[0m] [0m	found org.scala-lang.modules#scala-xml_2.12;1.0.6 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang.modules#scala-xml_2.12;1.0.6 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.0 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.0 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-library;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang#scala-reflect;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang.modules#scala-xml_2.12;1.0.6 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.12.4->org.scala-lang.modules#scala-xml_2.12;1.0.6 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.0 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.12;1.0.6->org.scala-lang#scala-library;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-library;2.12.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-library;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-reflect;2.12.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-reflect;2.12.4 [compile->compile(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-compiler;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-library;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-library;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-reflect;2.12.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scalamacros#paradise_2.12.4;2.1.0->org.scala-lang#scala-reflect;2.12.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0->org.scalamacros#paradise_2.12.4;2.1.0 [plugin->master][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'sources'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [sources][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'docs'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [docs][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'pom'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [pom][0m
+[0m[[0mdebug[0m] [0mresolving dependencies for configuration 'scala-tool'[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 [scala-tool][0m
+[0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
+[0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scalamacros#paradise_2.12.4;2.1.0!paradise_2.12.4.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.4!scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.12.4!scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.4!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)[0m
+[0m[[0minfo[0m] [0m:: resolution report :: resolve 110ms :: artifacts dl 5ms[0m
+[0m[[0minfo[0m] [0m	:: modules in use:[0m
+[0m[[0minfo[0m] [0m	org.scala-lang#scala-compiler;2.12.4 from sbt-chain in [plugin][0m
+[0m[[0minfo[0m] [0m	org.scala-lang#scala-library;2.12.4 from sbt-chain in [plugin][0m
+[0m[[0minfo[0m] [0m	org.scala-lang#scala-reflect;2.12.4 from sbt-chain in [plugin][0m
+[0m[[0minfo[0m] [0m	org.scala-lang.modules#scala-xml_2.12;1.0.6 from sbt-chain in [plugin][0m
+[0m[[0minfo[0m] [0m	org.scalamacros#paradise_2.12.4;2.1.0 from sbt-chain in [plugin][0m
+[0m[[0minfo[0m] [0m	:: evicted modules:[0m
+[0m[[0minfo[0m] [0m	org.scala-lang#scala-library;2.12.0 by [org.scala-lang#scala-library;2.12.4] in [plugin][0m
+[0m[[0mdebug[0m] [0m	  in org.scala-lang.modules#scala-xml_2.12;1.0.6 with latest-revision[0m
+[0m[[0minfo[0m] [0m	---------------------------------------------------------------------[0m
+[0m[[0minfo[0m] [0m	|                  |            modules            ||   artifacts   |[0m
+[0m[[0minfo[0m] [0m	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|[0m
+[0m[[0minfo[0m] [0m	---------------------------------------------------------------------[0m
+[0m[[0minfo[0m] [0m	|     universal    |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|  universal-docs  |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|   universal-src  |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      windows     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|       linux      |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      docker      |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      compile     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      runtime     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|       test       |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|     provided     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|     optional     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|        rpm       |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      debian      |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	| compile-internal |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	| runtime-internal |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|   test-internal  |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      plugin      |   6   |   0   |   0   |   1   ||   5   |   0   |[0m
+[0m[[0minfo[0m] [0m	|      sources     |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|       docs       |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|        pom       |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	|    scala-tool    |   0   |   0   |   0   |   0   ||   0   |   0   |[0m
+[0m[[0minfo[0m] [0m	---------------------------------------------------------------------[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 universal produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-universal.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 universal-docs produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-universal-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 universal-src produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-universal-src.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 windows produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-windows.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 linux produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-linux.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 docker produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-docker.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 compile produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 runtime produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 test produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 provided produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 optional produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 rpm produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-rpm.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 debian produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-debian.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 compile-internal produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 runtime-internal produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 test-internal produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 plugin produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 sources produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 docs produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 pom produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for org.scala-sbt.temp#temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5;1.0 scala-tool produced in E:\Dev\GitHub\Trading_Scala\target\scala-2.12\resolution-cache\reports\TayloredDevelopment-trading_scala_2.12-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (110ms resolve - 5ms download)[0m
+[0m[[0mdebug[0m] [0msaving minigraph to C:\Users\jason\.sbt\0.13\dependency\module\static\org.scalamacros\paradise_2.12.4\2.1.0_temp-resolve-bc0c4d3b5c53aa3d9eebc0cd4aeaff07e84042a5\graphs\graph.json[0m
+[0m[[0mdebug[0m] [0m:: merging update reports[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: universal: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: universal-docs: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: universal-src: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: windows: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: linux: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: docker: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: compile: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict compile: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: runtime: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict runtime: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: test: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict test: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: provided: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: optional: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: rpm: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: debian: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: compile-internal: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict compile-internal: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: runtime-internal: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict runtime-internal: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: test-internal: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict test-internal: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: plugin: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scalamacros:paradise_2.12.4, org.scala-lang:scala-compiler, org.scala-lang.modules:scala-xml_2.12, org.scala-lang:scala-reflect, org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict plugin: org.scalamacros:paradise_2.12.4[0m
+[0m[[0mdebug[0m] [0m:: no conflict plugin: org.scala-lang:scala-compiler[0m
+[0m[[0mdebug[0m] [0m:: no conflict plugin: org.scala-lang.modules:scala-xml_2.12[0m
+[0m[[0mdebug[0m] [0m:: no conflict plugin: org.scala-lang:scala-reflect[0m
+[0m[[0mdebug[0m] [0m:: no conflict plugin: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: sources: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: docs: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: pom: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: [0m
+[0m[[0mdebug[0m] [0m::: -----------[0m
+[0m[[0mdebug[0m] [0m:: scala-tool: loop: List()[0m
+[0m[[0mdebug[0m] [0m:: sort result: org.scala-lang:scala-compiler, jline:jline, org.scala-lang.modules:scala-xml_2.12, org.scala-lang:scala-reflect, org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m:: no conflict scala-tool: org.scala-lang:scala-compiler[0m
+[0m[[0mdebug[0m] [0m:: no conflict scala-tool: jline:jline[0m
+[0m[[0mdebug[0m] [0m:: no conflict scala-tool: org.scala-lang.modules:scala-xml_2.12[0m
+[0m[[0mdebug[0m] [0m:: no conflict scala-tool: org.scala-lang:scala-reflect[0m
+[0m[[0mdebug[0m] [0m:: merging module reports for scala-tool: org.scala-lang:scala-library[0m
+[0m[[0mdebug[0m] [0m::: adds org.scala-lang:scala-library:2.12.4 ()[0m
+[0m[[0mdebug[0m] [0m::: evicted [0m
+[0m[[0mdebug[0m] [0mignoring unhandled DependencyDescriptorMediator: class sbt.IvyScala$OverrideScalaMediator[0m
+[0m[[0minfo[0m] [0mDone updating.[0m

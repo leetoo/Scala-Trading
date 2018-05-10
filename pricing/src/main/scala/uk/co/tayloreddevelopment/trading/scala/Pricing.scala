@@ -14,6 +14,8 @@ object Pricing extends App {
   println(system)
   val pricingActor = system.actorOf(Props[PricingActor])
 
+
+
   println("Press any key to quit")
   val input = readLine
   System.exit(0)

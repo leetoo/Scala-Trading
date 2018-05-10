@@ -74,8 +74,6 @@ lazy val setDummyConfiguration = {
 
 }
 
-
-
 //Packaging Settings
 enablePlugins(JavaAppPackaging)
 enablePlugins(ClasspathJarPlugin)

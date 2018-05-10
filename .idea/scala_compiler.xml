@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="trading_scala_3851" />
-    <profile name="sbt 2" modules="tradingApi,strategy,order,versioning,evaluation,core,trading,valuation,deal,pricing,backtest">
+    <profile name="sbt 2" modules="versioning,strategy,backtest,order,evaluation,tradingApi,trading,deal,valuation,pricing,core">
       <option name="reflectiveCalls" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
@@ -12,7 +12,7 @@
         <parameter value="-Xlint" />
       </parameters>
     </profile>
-    <profile name="sbt 3" modules="root,trading_scala">
+    <profile name="sbt 3" modules="root">
       <option name="reflectiveCalls" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
@@ -23,6 +23,19 @@
       </parameters>
       <plugins>
         <plugin path="C:\Users\jason\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scalamacros\paradise_2.12.4\2.1.0\paradise_2.12.4-2.1.0.jar" />
+      </plugins>
+    </profile>
+    <profile name="sbt 4" modules="trading_scala">
+      <option name="reflectiveCalls" value="true" />
+      <option name="deprecationWarnings" value="true" />
+      <option name="uncheckedWarnings" value="true" />
+      <option name="featureWarnings" value="true" />
+      <parameters>
+        <parameter value="-target:jvm-1.8" />
+        <parameter value="-Xlint" />
+      </parameters>
+      <plugins>
+        <plugin path="C:\Users\jason\.ivy2\cache\org.scalamacros\paradise_2.12.4\jars\paradise_2.12.4-2.1.0.jar" />
       </plugins>
     </profile>
   </component>

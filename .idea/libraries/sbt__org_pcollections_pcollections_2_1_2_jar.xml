@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="sbt: org.pcollections:pcollections:2.1.2:jar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/pcollections/pcollections/2.1.2/pcollections-2.1.2.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.pcollections/pcollections/jars/pcollections-2.1.2.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/pcollections/pcollections/2.1.2/pcollections-2.1.2-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/pcollections/pcollections/2.1.2/pcollections-2.1.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.pcollections/pcollections/srcs/pcollections-2.1.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

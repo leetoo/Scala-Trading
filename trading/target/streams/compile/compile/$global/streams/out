@@ -1,4 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Dev\GitHub\Trading_Scala\trading\src\main\scala\uk\co\tayloreddevelopment\trading\scala\TradingServiceImpl.scala:12:75: parameter value ec in class TradingServiceImpl is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                lifecycle: ApplicationLifecycle)(implicit ec: ExecutionContext)  extends TradingService {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                                                          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
