@@ -1,5 +1,7 @@
 package uk.co.tradingdevelopment.trading.scala.domain
 
+import reactivemongo.bson.{BSONDocument, BSONHandler, Macros}
+
 case class Point(bid:Double,ask:Double){
   def mid:Double = (bid,ask ) match {
     case (0.0,0.0) => 0
@@ -13,4 +15,9 @@ case class Point(bid:Double,ask:Double){
     case (0.0,a) => 0
     case _ => bid-ask
   }
+}
+
+object Point{
+  implicit val pointHandler: BSONHandler[BSONDocument, Point] =
+    Macros.handler[Point]
 }

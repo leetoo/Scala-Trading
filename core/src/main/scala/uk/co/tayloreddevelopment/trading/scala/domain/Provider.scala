@@ -1,13 +1,17 @@
 
 package uk.co.tradingdevelopment.trading.scala.domain
 
-import reactivemongo.bson.BSONObjectID
-import uk.co.tradingdevelopment.trading.scala.objects.Interval
 
+import reactivemongo.bson._
 
-case class Provider(id:BSONObjectID,
+case class Provider(id:BSONObjectID= BSONObjectID.generate,
                     name:String,
                     accounts:Vector[Account],
-                    durations:List[InstrumentInterval],
-                    instruments:List[Instrument])
+                    durations:Vector[InstrumentInterval],
+                    instruments:Vector[Instrument])
 
+
+object Provider{
+  implicit val personHandler: BSONHandler[BSONDocument, Provider] =
+    Macros.handler[Provider]
+}
