@@ -1,5 +1,5 @@
 package uk.co.tradingdevelopment.trading.scala.objects
-
+import uk.co.tradingdevelopment.trading.scala.objects._
 import cats.Eval
 import io.circe.{Decoder, Encoder}
 import io.circe.generic.extras.semiauto.{deriveEnumerationDecoder, deriveEnumerationEncoder}
@@ -21,6 +21,17 @@ object Interval {
   case object D1 extends Interval
   case object D5 extends Interval
   case object W1 extends Interval
+
+  import reactivemongo.bson.Macros,
+  Macros.Options.{ AutomaticMaterialization, UnionType, \/ }
+
+  // Use `UnionType` to define a subset of the `Color` type,
+  type PredefinedInterval =
+    UnionType[Tick.type \/ M1.type \/ M5.type \/ M15.type \/ M30.type \/ H1.type \/ H2.type \/ H3.type \/ H4.type \/ H6.type \/ H8.type  \/ D1.type \/ D5.type \/ W1.type] with AutomaticMaterialization
+
+  val predefinedInterval = Macros.handlerOpts[Interval, PredefinedInterval]
+
+
 
   implicit val decodeInterval: Decoder[Interval] = deriveEnumerationDecoder
   implicit val encodeInterval: Encoder[Interval] = deriveEnumerationEncoder

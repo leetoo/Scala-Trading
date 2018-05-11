@@ -14,6 +14,11 @@ import reactivemongo.bson.{BSONDocument, BSONHandler, Macros}
 
 
 object Calendar{
-  implicit val calendarHandler: BSONHandler[BSONDocument, Calendar] =
-    Macros.handler[Calendar]
+//  implicit val localdateHandler: BSONHandler[BSONDocument, LocalDate] =
+//    Macros.handler[LocalDate]
+//  implicit val calendarHandler: BSONHandler[BSONDocument, Calendar] =
+//    Macros.handler[Calendar]
+//
+//  implicit val calendarDayOfWeek: BSONHandler[BSONDocument, DayOfWeek] =
+//    Macros.handler[DayOfWeek]
 }

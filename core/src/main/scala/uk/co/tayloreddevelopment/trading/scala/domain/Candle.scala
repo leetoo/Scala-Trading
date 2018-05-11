@@ -16,6 +16,6 @@ case class Candle(id: BSONObjectID,
 
 
 object Candle{
-  implicit val candleHandler: BSONHandler[BSONDocument, Candle] =
-    Macros.handler[Candle]
+//  implicit val candleHandler: BSONHandler[BSONDocument, Candle] =
+//    Macros.handler[Candle]
 }

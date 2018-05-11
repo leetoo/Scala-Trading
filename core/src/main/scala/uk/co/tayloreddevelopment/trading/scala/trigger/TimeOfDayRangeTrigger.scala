@@ -1,5 +1,6 @@
 package uk.co.tayloreddevelopment.trading.scala.trigger
 
+import java.time.temporal.ChronoField
 import java.time.{LocalDateTime, LocalTime}
 
 import uk.co.tradingdevelopment.trading.scala.collections.SlidingStack
@@ -23,7 +24,7 @@ case class TimeOfDayRangeTrigger(ticker: String,
     Try {
       val c = stack.get.head
       val cTime= c.timeStamp.system
-      val cDateTime = LocalTime.of(cTime.getHour,cTime.getMinute)
+      val cDateTime = LocalTime.of(cTime.get(ChronoField.HOUR_OF_DAY),cTime.get(ChronoField.MINUTE_OF_HOUR))
       val startDateTime =  LocalTime.of(startTime.hour,startTime.minute)
       val endDateTime =   LocalTime.of(endTime.hour,endTime.minute)
       startDateTime.isBefore(cDateTime) &&  endDateTime.isAfter(cDateTime)

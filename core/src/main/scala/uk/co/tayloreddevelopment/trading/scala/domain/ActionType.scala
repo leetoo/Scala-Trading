@@ -1,5 +1,5 @@
 package uk.co.tradingdevelopment.trading.scala.domain
-
+import uk.co.tradingdevelopment.trading.scala.objects._
 
 import reactivemongo.bson.{BSONDocument, BSONHandler, Macros}
 import uk.co.tradingdevelopment.trading.scala.domain._
@@ -11,7 +11,10 @@ case class Notification(level:NotificationLevel,subject:String,message:String) e
 
 
 object ActionType{
-  implicit val placeOrders = Macros.handler[PlaceOrders]
-  implicit val notification = Macros.handler[Notification]
-  implicit val bson: BSONHandler[BSONDocument, ActionType] = Macros.handler[ActionType]
+
+//  implicit val notificationLevel = Macros.handler[NotificationLevel]
+//  implicit val placeOrders = Macros.handler[PlaceOrders]
+//  implicit val notification = Macros.handler[Notification]
+//
+//  implicit val bson: BSONHandler[BSONDocument, ActionType] = Macros.handler[ActionType]
 }

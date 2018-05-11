@@ -1,6 +1,6 @@
 package uk.co.tayloreddevelopment.trading.scala.trigger
 
-import java.time.temporal.TemporalField
+import java.time.temporal.{ChronoField, TemporalField}
 
 import uk.co.tradingdevelopment.trading.scala.collections.SlidingStack
 import uk.co.tradingdevelopment.trading.scala.domain.{Candle, TimeOfDay}
@@ -24,7 +24,7 @@ case class TimeOfDayTrigger(ticker: String,
       val c = stack.get.head
       val t = c.timeStamp.system
 
-      (t.getHour, t.getMinute) match {
+      (t.get(ChronoField.HOUR_OF_DAY), t.get(ChronoField.MINUTE_OF_HOUR)) match {
         case (h, m)
             if timeOfDay.hour == h && timeOfDay.minute == m =>
           true
