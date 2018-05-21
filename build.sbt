@@ -83,7 +83,6 @@ enablePlugins(RpmPlugin)
 enablePlugins(DebianPlugin)
 enablePlugins(WindowsPlugin)
 
-
 lazy val setBashParams = {
   bashScriptExtraDefines ++= Seq(
     """addJava "-Xmx4g"""",
@@ -100,6 +99,7 @@ lazy val setBatParams = {
 
 //Core Libraries
 lazy val commonSettings = Seq(
+  libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.7.3",
   libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.2.5" % "provided",
   libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.1",
   libraryDependencies += "co.fs2" %% "fs2-core" % "0.10.1",
@@ -116,7 +116,8 @@ lazy val commonSettings = Seq(
   libraryDependencies += "io.circe" %% "circe-generic" % circeVersion,
   libraryDependencies += "io.circe" %% "circe-parser" % circeVersion,
   libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0",
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0"
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0",
+  libraryDependencies += "io.reactivex" %% "rxscala" % "0.26.5"
 )
 
 lazy val packageSettings = Seq(
@@ -136,10 +137,29 @@ lazy val packageSettings = Seq(
   wixProductUpgradeId := "A20A2F6D-A5F3-4FB8-837A-CBEE192DA960"
 )
 
+lazy val sentimentSettings = Seq(
+  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0",
+  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0" classifier "models"
+)
+
+lazy val htmlSettings = Seq(
+  libraryDependencies += "net.sourceforge.htmlcleaner" % "htmlcleaner" % "2.6.1",
+  libraryDependencies += "net.ruippeixotog" %% "scala-scraper" % "2.0.0",
+  libraryDependencies += "org.htmlparser" % "htmlparser" % "2.1"
+)
+
+lazy val pdfSettings = Seq(
+  libraryDependencies += "org.apache.pdfbox" % "pdfbox" % "2.0.8",
+  libraryDependencies += "org.apache.pdfbox" % "pdfbox-tools" % "2.0.8"
+)
+
+lazy val notificationSettings = Seq(
+  libraryDependencies += "com.github.sps.pushover.net" % "pushover-client" % "1.0.0"
+)
+
 lazy val versioning =
   (project in file("versioning"))
-    .enablePlugins(BuildInfoPlugin,
-                   LagomScala)
+    .enablePlugins(BuildInfoPlugin, LagomScala)
     .settings(
       version := globalVersion,
       buildInfoKeys := globalBuildInfoKeys,
@@ -157,6 +177,27 @@ lazy val core =
     .settings(setBashParams: _*)
     .settings(setBatParams: _*)
     .settings(packageSettings: _*)
+    .settings(notificationSettings: _*)
+    .settings(htmlSettings: _*)
+    .settings(pdfSettings: _*)
+    .settings(sentimentSettings: _*)
+    .settings(commonSettings: _*)
+
+lazy val news =
+  (project in file("news"))
+    .dependsOn(versioning)
+    .enablePlugins(LagomScala)
+    .settings(
+      packageName := "news",
+      version := globalVersion
+    )
+    .settings(setBashParams: _*)
+    .settings(setBatParams: _*)
+    .settings(packageSettings: _*)
+    .settings(notificationSettings: _*)
+    .settings(htmlSettings: _*)
+    .settings(pdfSettings: _*)
+    .settings(sentimentSettings: _*)
     .settings(commonSettings: _*)
 
 lazy val pricing =

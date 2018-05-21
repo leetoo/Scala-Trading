@@ -6,6 +6,7 @@
       <module name="core" target="1.8" />
       <module name="deal" target="1.8" />
       <module name="evaluation" target="1.8" />
+      <module name="news" target="1.8" />
       <module name="order" target="1.8" />
       <module name="pricing" target="1.8" />
       <module name="strategy" target="1.8" />

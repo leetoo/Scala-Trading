@@ -10,6 +10,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/deal-build.iml" filepath="$PROJECT_DIR$/.idea/modules/deal-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/news.iml" filepath="$PROJECT_DIR$/.idea/modules/news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/news-build.iml" filepath="$PROJECT_DIR$/.idea/modules/news-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order.iml" filepath="$PROJECT_DIR$/.idea/modules/order.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-build.iml" filepath="$PROJECT_DIR$/.idea/modules/order-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing.iml" />
