@@ -58,7 +58,7 @@ object GenericCollectionExtensions {
           Failure(
             logErrorAndReturn(CORE,
                               Some("Unable to convert object to array node"),
-                              ex)(id))
+                              ex))
 
       }
     }
@@ -69,7 +69,7 @@ object GenericCollectionExtensions {
         case Failure(ex) =>
           logError(CORE,
                    Some("Unable to parse as JsonArrayNode"),
-                   ex)(id)
+                   ex)
 
           EmptyJsonArrayNode
       }
@@ -103,7 +103,7 @@ object GenericCollectionExtensions {
           Failure(
             logErrorAndReturn(CORE,
                               Some("Unable to convert object to array node"),
-                              ex)(id))
+                              ex))
 
       }
     }
@@ -114,7 +114,7 @@ object GenericCollectionExtensions {
         case Failure(ex) =>
           logError(CORE,
                    Some("Unable to parse as JsonArrayNode"),
-                   ex)(id)
+                   ex)
 
           EmptyJsonArrayNode
       }

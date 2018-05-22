@@ -99,7 +99,7 @@ lazy val setBatParams = {
 
 //Core Libraries
 lazy val commonSettings = Seq(
-  libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.7.3",
+  libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.9.5",
   libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.2.5" % "provided",
   libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.1",
   libraryDependencies += "co.fs2" %% "fs2-core" % "0.10.1",
@@ -184,7 +184,7 @@ lazy val core =
 
 lazy val news =
   (project in file("news"))
-    .dependsOn(versioning)
+    .dependsOn(core)
     .enablePlugins(LagomScala)
     .settings(
       packageName := "news",

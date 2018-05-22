@@ -26,8 +26,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
   def getSourceFromUrl(url: String): String =
     Await.result(ws.url(url).get(), Duration(2, TimeUnit.MINUTES)).body
 
-  def collectWebPageTables(id: String,
-                           obfuscate: Boolean,
+  def collectWebPageTables(
                            docUrl: String,
                            removeScripts: Boolean,
                            xpath: String): ArrayNode = {
@@ -78,7 +77,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
               .toList)
 
       val an = TableArrayNode(headerRow, bodyRows)
-      logInfo( CORE, Some(s"Table Array Node"), an)(id)
+      logInfo( CORE, Some(s"Table Array Node"), an)
       an
 
     } match {
@@ -86,15 +85,14 @@ class WebPageCollector(ws: WSClient) extends Loggable {
       case Failure(ex) => {
         logError(CORE,
           Some(s"Could not get lift html for doc  $docUrl"),
-          ex)(id)
+          ex)
         SimpleJsonArrayNode("error", ex.getMessage)
       }
     }
 
   }
 
-  def collectWebPageText(id: String,
-                         obfuscate: Boolean,
+  def collectWebPageText(
                          docUrl: String,
                          removeScripts: Boolean): String = {
     Try {
@@ -123,7 +121,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
         .recursivelyReplaceAll("\n", " ")
         .recursivelyReplaceAll("  ", " ")
 
-      logInfo(CORE, Some(s"Lifted Text"), txt)(id)
+      logInfo(CORE, Some(s"Lifted Text"), txt)
       txt
 
     } match {
@@ -135,7 +133,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
           case Failure(dex) => {
             logError(CORE,
               Some(s"Could not get decode html for doc  $docUrl"),
-              dex)(id)
+              dex)
             r
           }
         }
@@ -143,7 +141,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
         logError(
           CORE,
           Some(s"Could not get lift html for doc  $docUrl"),
-          ex)(id)
+          ex)
         ex.getMessage
       }
     }

@@ -15,7 +15,7 @@ class PushoverNotifierSpec extends FunSpec {
 
     it("should send messages to client") {
      val notifier = new PushoverNotifier("ar246pddo2bhgn4c6axx4648dm4tue","gnpdagjyiam46hge3b6a4srt535jk2")
-      notifier.Notify("Unit Test","Quick Message", High)
+      notifier.Notify("Unit Test","Quick Message","http\\:www.google.co.uk",High)
     }
   }
 }

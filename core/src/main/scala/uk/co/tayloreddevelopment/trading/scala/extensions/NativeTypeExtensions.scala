@@ -54,7 +54,7 @@ object NativeTypeExtensions extends Loggable {
                     logError(CORE,
                       Some(
                         "Error replacing key:" + replacementKey + " with value:" + x._2),
-                      e)(id))
+                      e))
             } else {
               payload
             }
@@ -62,7 +62,7 @@ object NativeTypeExtensions extends Loggable {
         }
       logInfo(CORE,
               Some("Replacing -> "),
-              markers._1 + markers._2)(id)
+              markers._1 + markers._2)
       innerReplaceMarkers(obj, maps)
     }
 

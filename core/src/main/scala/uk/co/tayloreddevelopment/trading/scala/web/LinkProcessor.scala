@@ -10,21 +10,19 @@ import scala.util.{Failure, Success, Try}
 
 
 class LinkProcessor(ws: WSClient) extends Loggable {
-  lazy val linkRegEx: Regex =
+ private lazy val linkRegEx: Regex =
     "(http|https|ftp|ftps)\\:\\/\\/[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(\\/\\S*)?".r
   private lazy val pageCollector = new WebPageCollector(ws)
-  def processs(id: String, obfuscate: Boolean, text: String): Option[JsonNode] =
+  def process(text: String): Option[String] =
     Try {
       text +: linkRegEx
         .findAllIn(text)
-        .map(t => pageCollector.collectWebPageText(id, obfuscate, t, removeScripts = true))
+        .map(t => pageCollector.collectWebPageText(t, removeScripts = true))
         .toVector
 
     } match {
       case Success(txt) =>
-        println(txt)
-        val combined = txt.mkString(" ")
-        Some(SimpleJsonNode("text", combined))
+        Some( txt.mkString(" "))
       case Failure(_) => None
     }
 

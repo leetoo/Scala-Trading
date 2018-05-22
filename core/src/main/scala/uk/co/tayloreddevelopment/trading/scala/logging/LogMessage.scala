@@ -28,33 +28,33 @@ trait Loggable {
 
   def logInfo[A](component: Component,
                  message: Option[String],
-                 logItem: A)(implicit id: String) =
+                 logItem: A) =
     log( INFO, component, message, logItem)
   def logInfoAndReturn[A](component: Component,
                           message: Option[String],
-                          logItem: A)(implicit id: String) =
+                          logItem: A) =
     logAndReturn( INFO, component, message, logItem)
   def logError[A](component: Component,
                   message: Option[String],
-                  logItem: A)(implicit id: String) =
+                  logItem: A) =
     log( ERROR, component, message, logItem)
   def logErrorAndReturn[A](component: Component,
                            message: Option[String],
-                           logItem: A)(implicit id: String) =
+                           logItem: A) =
     logAndReturn( ERROR, component, message, logItem)
   def logTiming[A]( component: Component,
                    message: Option[String],
-                   logItem: A)(implicit id: String) =
+                   logItem: A) =
     log( TIMING, component, message, logItem)
   def logTimingAndReturn[A](component: Component,
                             message: Option[String],
-                            logItem: A)(implicit id: String) =
+                            logItem: A) =
     logAndReturn(TIMING, component, message, logItem)
 
   private def logAndReturn[A](level: LogLevel,
                               component: Component,
                               message: Option[String],
-                              logItem: A)(implicit id: String) = {
+                              logItem: A) = {
     log(level, component, message, logItem)
     logItem
   }
@@ -90,7 +90,8 @@ trait Loggable {
         Perf.GetPerformance,
         SysEnv.GetEnvironment,
         BuildEnv.GetBuild)
-      Try(flatLog.asJsonString) match {
+
+      Try(flatLog.toString) match {
         case Success(logItem) =>
           if (m.level == ERROR) {
             Try(logger.error(logItem)).processError(println)
@@ -136,7 +137,7 @@ case class LogMessage[A](
   def toFlatLogMessage: FlatLogMessage = {
     val paredLogItem: String = try {
 
-      message.asJsonString
+      message.toString
     } catch {
       case _: Exception => logItem.toString
     }

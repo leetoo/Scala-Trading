@@ -1,7 +1,7 @@
 package uk.co.tayloreddevelopment.trading.scala
 
 import akka.actor.{ActorSystem, Props}
-
+import uk.co.tayloreddevelopment.trading.scala.Actors.{KafkaTweetActor, RssReaderActor, SubscribeToKafta, SubscribeToRss}
 
 import scala.concurrent._
 import scala.concurrent.duration._
@@ -15,12 +15,17 @@ object News extends App {
 
   println("Actor system created")
   println(system)
-  //val pricingActor = system.actorOf(Props[PricingActor])
+  val tweetActor = system.actorOf(Props[KafkaTweetActor])
+  val rssActor = system.actorOf(Props[RssReaderActor])
 
 
+tweetActor ! SubscribeToKafta(true)
+  rssActor ! SubscribeToRss(Vector("http://lse.einnews.com/rss/bia3tK9kGDSwNBad"))
 
   println("Press any key to quit")
   val input = readLine
+  tweetActor ! SubscribeToKafta(false)
+
   Await.result(system.terminate(), 60 seconds)
   System.exit(0)
 }

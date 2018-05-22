@@ -13,10 +13,11 @@ class PushoverNotifier(apiToken:String,userToken:String) extends Notifier {
     case Low => MessagePriority.QUIET
   }
 
-  override def Notify(title: String, message: String, level:NotificationLevel): Unit = client.pushMessage(PushoverMessage.builderWithApiToken(apiToken)
+  override def Notify(title: String, message: String,url:String, level:NotificationLevel): Unit = client.pushMessage(PushoverMessage.builderWithApiToken(apiToken)
     .setUserId(userToken)
     .setMessage(message)
     .setTitle(title)
+      .setUrl(url)
     .setPriority(getLevel(level))
     .setSound("magic")
     .build())

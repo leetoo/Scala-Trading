@@ -42,16 +42,16 @@ class StdOutListener(tweepy.StreamListener):
     def on_status(self, status):
         
         # Prints the text of the tweet
-        #print '%d,%d,%d,%s,%s' % (status.user.followers_count, status.user.friends_count,status.user.statuses_count, status.user.id_str, status.user.screen_name)
+        print('%s,%s,%s' % ( status.user.id_str, status.user.screen_name,status.text))
         
         # Schema changed to add the tweet text
-        print '%d,%d,%d,%s,%s' % (status.user.followers_count, status.user.friends_count,status.user.statuses_count, status.text, status.user.screen_name)
+
         message =  status.text + ',' + status.user.screen_name
         msg = filter(lambda x: x in string.printable, message)
         try:
             producer.send(mytopic, str(msg))
-        except Exception, e:
-            print('ERROR: ' + e)
+        except Exception  as e:
+            #print('ERROR: ' + e.)
             return True
         
         return True
@@ -91,7 +91,11 @@ if __name__ == '__main__':
 
     stream = tweepy.Stream(auth, listener)
 
-    stream.filter(track=['@Reuters', '@ReutersBiz', '@DailyFXTeam', '@markets', '@zerohedge', '@CityAM', '@business', '@BBCBusiness', '@LiveSquawk', '@CNBC'])
+    stream.filter(track=['@LSEplc', '@SHARESmag‏', '@WarrenBuffett', '@alphatrends‏', '@FousAlerts‏', '@DanZanger‏', '@traderstewie‏', '@harmongreg‏', '@WSJmarkets‏', '@The_Real_Fly‏',
+                         '@EIAgov', '@Schuldensuehner', '@paulkrugman', '@AswathDamodaran', '@ukarlewitz', '@lindayueh', '@JStanleyFX', '@JMahony_IG', '@IGTV', '@IGClientHelp',
+                         '@IGSquawk‏', '@IGcom', '@OANDAbusiness', '@OANDAlerts', '@OANDA', '@markets', '@FTAlphaville', '@FT', '@coindesk', '@Reuters',
+                         '@SkyNewsBiz', '@BBCBusiness', '@ChrisB_IG', '@LiveSquawk', '@DailyFXTeam', '@CNBC', '@economics', '@RANsquawk', '@business', '@CityAM',
+                         '@ReutersBiz', '@ForexLive', '@nikolaslippmann'])
 
     
 
