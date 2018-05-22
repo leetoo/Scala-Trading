@@ -1,6 +1,7 @@
 package uk.co.tradingdevelopment.trading.scala.domain
 import reactivemongo.bson.{BSONDocument, BSONHandler, Macros}
-import uk.co.tradingdevelopment.trading.scala.objects._
+import uk.co.tayloreddevelopment.trading.scala.domain.{Interval, PricingType}
+
 
 case class InstrumentInterval(interval: Interval, pricingType: PricingType)
 

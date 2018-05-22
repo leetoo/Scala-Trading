@@ -3,9 +3,9 @@ package uk.co.tayloreddevelopment.trading.scala.trigger
 import java.time.temporal.ChronoField
 import java.time.{LocalDateTime, LocalTime}
 
+import uk.co.tayloreddevelopment.trading.scala.domain.Interval
 import uk.co.tradingdevelopment.trading.scala.collections.SlidingStack
 import uk.co.tradingdevelopment.trading.scala.domain.{Candle, TimeOfDay}
-import uk.co.tradingdevelopment.trading.scala.objects.Interval
 
 import scala.util.Try
 

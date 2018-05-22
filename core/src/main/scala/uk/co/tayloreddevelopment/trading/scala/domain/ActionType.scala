@@ -1,9 +1,8 @@
 package uk.co.tradingdevelopment.trading.scala.domain
-import uk.co.tradingdevelopment.trading.scala.objects._
 
 import reactivemongo.bson.{BSONDocument, BSONHandler, Macros}
-import uk.co.tradingdevelopment.trading.scala.domain._
-import uk.co.tradingdevelopment.trading.scala.objects._
+import uk.co.tayloreddevelopment.trading.scala.domain.NotificationLevel
+
 
 sealed trait ActionType
 case class PlaceOrders(orders:List[OrderSpecification]) extends ActionType

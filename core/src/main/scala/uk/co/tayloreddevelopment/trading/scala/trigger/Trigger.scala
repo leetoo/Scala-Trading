@@ -1,9 +1,8 @@
 package uk.co.tayloreddevelopment.trading.scala.trigger
 
+import uk.co.tayloreddevelopment.trading.scala.domain.Interval
 import uk.co.tradingdevelopment.trading.scala.collections.SlidingStack
 import uk.co.tradingdevelopment.trading.scala.domain._
-import uk.co.tradingdevelopment.trading.scala.objects.Interval
-
 import uk.co.tradingdevelopment.trading.scala.operators.Pipe._
 trait Trigger {
   val interval: Interval

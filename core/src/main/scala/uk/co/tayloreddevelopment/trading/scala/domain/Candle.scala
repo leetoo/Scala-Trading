@@ -1,7 +1,7 @@
 package uk.co.tradingdevelopment.trading.scala.domain
 
 import reactivemongo.bson.{BSONDocument, BSONHandler, BSONObjectID, Macros}
-import uk.co.tradingdevelopment.trading.scala.objects.Interval
+import uk.co.tayloreddevelopment.trading.scala.domain.Interval
 
 case class Candle(id: BSONObjectID,
                   ticker: String,

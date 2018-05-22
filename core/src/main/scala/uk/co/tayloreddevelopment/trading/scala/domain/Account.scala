@@ -1,9 +1,9 @@
 package uk.co.tradingdevelopment.trading.scala.domain
 
 import reactivemongo.bson.{BSONDocument, BSONDocumentReader, BSONHandler, Macros}
-import uk.co.tradingdevelopment.trading.scala.objects.{ContractType, TradingEnvironment}
-import uk.co.tradingdevelopment.trading.scala.objects.TradingEnvironment._
-import uk.co.tradingdevelopment.trading.scala.objects.ContractType._
+import uk.co.tayloreddevelopment.trading.scala.domain.{ContractType, TradingEnvironment}
+
+
 case class Account(_id:String,
                    alias: String,
                    ProviderName: String,
