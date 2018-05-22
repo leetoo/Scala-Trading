@@ -105,7 +105,6 @@ lazy val commonSettings = Seq(
   libraryDependencies += "co.fs2" %% "fs2-core" % "0.10.1",
   libraryDependencies += "co.fs2" %% "fs2-io" % "0.10.1",
   libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.3",
-  libraryDependencies += "io.monix" %% "monix" % "3.0.0-RC1",
   libraryDependencies += "org.typelevel" %% "cats-effect" % "1.0.0-RC",
   libraryDependencies += "io.bfil" %% "rx-kafka-core" % "0.2.0",
   libraryDependencies += "org.reactivemongo" %% "reactivemongo" % "0.13.0",
