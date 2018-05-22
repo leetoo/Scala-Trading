@@ -1,8 +1,6 @@
 language: scala
 matrix:
   include:
-    - jdk: oraclejdk7
-      scala: 2.11.8
     - jdk: oraclejdk8
       scala: 2.12.4
 script:
