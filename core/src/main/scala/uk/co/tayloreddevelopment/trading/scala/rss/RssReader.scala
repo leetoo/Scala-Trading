@@ -1,18 +1,71 @@
 package uk.co.tradingdevelopment.trading.scala.rss
 
 import scala.xml._
-import java.net.URL
+import java.net.{URL, URLDecoder}
 import java.text.SimpleDateFormat
-import java.util.{Locale, Date}
+import java.util.{Date, Locale}
+
 import akka.util.Timeout
+
 import scala.concurrent.duration._
 import scala.concurrent.ExecutionContext.Implicits.global
 import akka.actor.{Actor, ActorSystem, Props}
 import akka.event.Logging
 import akka.pattern.ask
+
 import scala.concurrent._
-import scala.util.{Try, Success, Failure}
+import scala.util.{Failure, Success, Try}
 import java.io._
+
+import org.htmlcleaner.HtmlCleaner
+
+import scala.collection.immutable
+
+case class RssItem(description:String, link:String)
+
+
+object RssStreamer{
+  lazy val cleaner = new HtmlCleaner
+  val props = cleaner.getProperties
+  props.setOmitComments(true)
+
+  props.setPruneTags("script,style,img")
+
+  props.setAllowHtmlInsideAttributes(false)
+
+  def getRss(url:String):Vector[RssItem] =  Try(getItems(loadUrl(url)).map(resolveNode).toVector) match {
+    case Success(vn) => vn.flatten.map(r => {
+      val cleanTag = cleaner.clean(r.description)
+
+      RssItem(cleanTag.getText.toString,r.link)
+    })
+    case Failure(ex) => throw ex
+  }
+
+
+private def resolveNode(nodeSeq:NodeSeq) = nodeSeq.toVector.map(n =>   RssItem((n \ "title").text + " " + (n \ "description").text,(n \ "link").text ))
+private def getItems(xml:Node): Vector[NodeSeq] = Try{
+
+  for (channel <- xml \\ "channel") yield {
+    for (item <- (channel \\ "item")) yield item
+  }
+} match {
+  case Success(x) => x.toVector
+  case Failure(ex) => throw ex
+}
+  private def loadUrl(url:String) =Try( XML.load(new URL(url))) match {
+    case Success(e) =>e
+    case Failure(ex) => throw ex
+  }
+}
+
+class RssStreamer(interval:Int, rssFeeds:Vector[String]) extends PollingRxStreamer[RssItem](interval){
+  override protected def getData: Vector[RssItem] = for {
+    feed <- rssFeeds
+    item <- RssStreamer.getRss(feed)
+  } yield item
+
+}
 
 
 //

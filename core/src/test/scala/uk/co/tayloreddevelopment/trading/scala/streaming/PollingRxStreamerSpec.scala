@@ -1,4 +1,4 @@
-package uk.co.tradingdevelopment.trading.scala.collections
+package uk.co.tradingdevelopment.trading.scala.streaming
 import uk.co.tradingdevelopment.trading.scala.timing._
 import uk.co.tradingdevelopment.trading.scala.operators.Pipe._
 import org.scalatest._
@@ -24,6 +24,7 @@ class PollingRxStreamerSpec extends FunSpec {
         list = s :: list
       })
       Thread.sleep(5000)
+      streamer.stop
       list.reverse shouldBe List(1, 2, 3, 4, 5)
     }
   }
