@@ -8,9 +8,8 @@
 
 import tweepy
 import threading, logging, time
-from kafka.client import KafkaClient
 from kafka.consumer import SimpleConsumer
-from kafka.producer import KafkaProducer
+from kafka import SimpleProducer, KafkaClient
 import string
 
 ######################################################################
@@ -23,8 +22,8 @@ access_token = '1068725924-WBigfGfCp5YVXpGENho6WVbKyFyr8cJUnDjf4s2'
 access_token_secret = 'isM3ualk8ryQ12TpkpbFg1xsr9ZmUTBNiOTKUltiPly4L'
 
 mytopic='rawtweets'
-
-producer = KafkaProducer(bootstrap_servers='localhost:9092')
+kafka = KafkaClient("localhost:9092")
+producer = SimpleProducer(kafka)
 
 ######################################################################
 #Create a handler for the streaming data that stays open...
@@ -41,17 +40,25 @@ class StdOutListener(tweepy.StreamListener):
 
     def on_status(self, status):
         
-        # Prints the text of the tweet
-        print('%s,%s,%s' % ( status.user.id_str, status.user.screen_name,status.text))
-        
-        # Schema changed to add the tweet text
 
-        message =  status.text + ',' + status.user.screen_name
-        msg = filter(lambda x: x in string.printable, message)
         try:
-            producer.send(mytopic, str(msg))
+            # Prints the text of the tweet
+            print('%s,%s,%s' % ( status.user.id_str, status.user.screen_name,status.text))
+
+            # Schema changed to add the tweet text
+            topic = 'test'
+            msg = 'Hello World'
+
+            message =  status.text + ',' + status.user.screen_name
+            msg = filter(lambda x: x in string.printable, message)
+            print('%s -> %s' % ( status.user.screen_name,  message))
+
+
+            finalmsg =bytes(message, 'utf-8')
+            producer.send_messages(topic,finalmsg)
+           # producer.send(mytopic, status.user.screen_name,str(message))
         except Exception  as e:
-            #print('ERROR: ' + e.)
+            print( e)
             return True
         
         return True

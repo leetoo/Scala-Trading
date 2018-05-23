@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode
 import com.typesafe.config.{Config, ConfigFactory}
 import play.api.libs.ws.ahc.AhcWSClient
 import reactivemongo.api.{DefaultDB, MongoConnection}
+import uk.co.tayloreddevelopment.trading.scala.twitter.TwitterItem
 import uk.co.tradingdevelopment.trading.scala.rss.RssItem
 import uk.co.tradingdevelopment.trading.scala.sentiment.CoreNLPSentiment
 import uk.co.tradingdevelopment.trading.scala.web.LinkProcessor
@@ -23,9 +24,10 @@ class LinkProcessingActor extends Actor {
   override def receive: Receive = {
     case x: RssItem =>
      linkProcessor.process(x.description + " " + x.link) match {
-       case Some(t) => filterActor ! MessageToFilter(t,x.link)
+       case Some(t) => filterActor ! MessageToFilter(t,x.link,"<RSS>")
        case None => ()
      }
+    case x:TwitterItem => filterActor ! MessageToFilter(x.user,x.text, "<TWITTER>")
 
     case _ => println("I don't know how to process this message")
   }

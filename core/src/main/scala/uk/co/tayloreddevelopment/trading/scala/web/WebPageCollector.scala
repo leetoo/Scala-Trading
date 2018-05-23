@@ -77,7 +77,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
               .toList)
 
       val an = TableArrayNode(headerRow, bodyRows)
-      logInfo( CORE, Some(s"Table Array Node"), an)
+      //logInfo( CORE, Some(s"Table Array Node"), an)
       an
 
     } match {
@@ -121,7 +121,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
         .recursivelyReplaceAll("\n", " ")
         .recursivelyReplaceAll("  ", " ")
 
-      logInfo(CORE, Some(s"Lifted Text"), txt)
+      //logInfo(CORE, Some(s"Lifted Text"), txt)
       txt
 
     } match {

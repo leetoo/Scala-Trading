@@ -99,7 +99,7 @@ lazy val setBatParams = {
 
 //Core Libraries
 lazy val commonSettings = Seq(
-  libraryDependencies += "com.fasterxml.jackson.module" % "jackson-module-scala" % "2.9.5",
+  libraryDependencies += "com.fasterxml.jackson.module" %% "jackson-module-scala" % "2.9.5",
   libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.2.5" % "provided",
   libraryDependencies += "org.typelevel" %% "cats-core" % "1.0.1",
   libraryDependencies += "co.fs2" %% "fs2-core" % "0.10.1",
@@ -116,7 +116,8 @@ lazy val commonSettings = Seq(
   libraryDependencies += "io.circe" %% "circe-parser" % circeVersion,
   libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0",
-  libraryDependencies += "io.reactivex" %% "rxscala" % "0.26.5"
+  libraryDependencies += "io.reactivex" %% "rxscala" % "0.26.5",
+  libraryDependencies +=  "com.danielasfregola" %% "twitter4s" % "5.5"
 )
 
 lazy val packageSettings = Seq(
