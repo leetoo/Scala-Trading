@@ -1,4 +1,4 @@
-package uk.co.tayloreddevelopment.trading.scala.Actors
+package uk.co.tayloreddevelopment.trading.scala.news.actors
 
 import akka.actor.{Actor, ActorRef, Props}
 import akka.stream.ActorMaterializer
@@ -10,7 +10,7 @@ import uk.co.tayloreddevelopment.trading.scala.twitter.TwitterItem
 import uk.co.tradingdevelopment.trading.scala.rss.RssItem
 import uk.co.tradingdevelopment.trading.scala.sentiment.CoreNLPSentiment
 import uk.co.tradingdevelopment.trading.scala.web.LinkProcessor
-
+import  uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
@@ -21,14 +21,15 @@ class LinkProcessingActor extends Actor {
   lazy val wsClient = AhcWSClient()
   lazy val linkProcessor = new LinkProcessor(wsClient)
   val filterActor: ActorRef = this.context.actorOf(Props[TagFilterActor])
+  val sentimentActor = this.context.actorOf(Props[SentimentActor])
   override def receive: Receive = {
-    case x: RssItem =>
-     linkProcessor.process(x.description + " " + x.link) match {
-       case Some(t) => filterActor ! MessageToFilter(t,x.link,"<RSS>")
-       case None => ()
-     }
-    case x:TwitterItem => filterActor ! MessageToFilter(x.user,x.text, "<TWITTER>")
+case x:ProcessLinks => {
+  linkProcessor.process(x.text) match {
+    case Some(t) => sentimentActor ! GetSentiment(x.key,x.filter,x.source,t._2,t._1)
+    case None => ()
+  }
 
+}
     case _ => println("I don't know how to process this message")
   }
 }

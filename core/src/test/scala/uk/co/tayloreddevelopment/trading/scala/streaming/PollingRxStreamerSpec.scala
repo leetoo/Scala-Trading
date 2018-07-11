@@ -9,7 +9,7 @@ import uk.co.tradingdevelopment.trading.scala.rss.PollingRxStreamer
 
 class PollingRxStreamerSpec extends FunSpec {
 
-  case class TestStreamer() extends PollingRxStreamer[Int](1) {
+  case class TestStreamer() extends PollingRxStreamer[Int](1,None) {
     override def getData: Vector[Int] = Vector(1, 2, 3, 4, 5)
   }
 //https://lse.einnews.com/rss/bia3tK9kGDSwNBad

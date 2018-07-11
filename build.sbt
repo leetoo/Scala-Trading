@@ -40,9 +40,9 @@ scalacOptions in ThisBuild ++= Seq(
   "-Xlint" // Scala 2.11.x only
 )
 javaOptions in ThisBuild ++= Seq(
-  "-Xmx4096M",
+  "-Xmx8192M",
   "-Xss2m",
-  "-XX:MaxPermSize=2048M",
+  "-XX:MaxPermSize=4096M",
   "-XX:ReservedCodeCacheSize=2G",
   "-XX:+TieredCompilation",
   "-XX:+CMSPermGenSweepingEnabled",
@@ -138,8 +138,8 @@ lazy val packageSettings = Seq(
 )
 
 lazy val sentimentSettings = Seq(
-  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0",
-  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.6.0" classifier "models"
+  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.9.1",
+  libraryDependencies += "edu.stanford.nlp" % "stanford-corenlp" % "3.9.1" classifier "models"
 )
 
 lazy val htmlSettings = Seq(
@@ -186,14 +186,13 @@ lazy val core =
 lazy val news =
   (project in file("news"))
     .dependsOn(core)
-    .enablePlugins(LagomScala)
     .settings(
       packageName := "news",
       version := globalVersion
     )
-    .settings(setBashParams: _*)
-    .settings(setBatParams: _*)
-    .settings(packageSettings: _*)
+//    .settings(setBashParams: _*)
+//    .settings(setBatParams: _*)
+//    .settings(packageSettings: _*)
     .settings(notificationSettings: _*)
     .settings(htmlSettings: _*)
     .settings(pdfSettings: _*)

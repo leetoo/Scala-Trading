@@ -128,7 +128,7 @@ class WebPageCollector(ws: WSClient) extends Loggable {
       case Success(r) =>
         Try(URLDecoder.decode(r, "UTF-8")) match {
           case Success(d) => {
-            d
+           d
           }
           case Failure(dex) => {
             logError(CORE,

@@ -4,9 +4,9 @@ import java.time.LocalDateTime
 
 import scala.collection.immutable.Vector
 import java.security.MessageDigest
-case class HashStamp(date: LocalDateTime, hash: Array[Byte])
+case class HashStamp(date: LocalDateTime, hash: String)
 
-class HashValidator[A](expiryMinutes: Int, historyScale:Int) {
+class HashValidator[A](expiryMinutes: Int, historyScale:Int, hasher:Option[A => String]) {
 
   private def getHash(item:A) = MessageDigest.getInstance("MD5").digest(item.toString.getBytes)
 
@@ -15,7 +15,10 @@ class HashValidator[A](expiryMinutes: Int, historyScale:Int) {
   def validate(item: A): Option[A] = {
     val timeStamp = LocalDateTime.now()
     val reduced = hashList.filterNot(_.date.plusMinutes(expiryMinutes * historyScale).isBefore(timeStamp))
-    val hash = getHash(item)
+    val hash: String =hasher match {
+      case Some(h) => h(item)
+      case None => getHash(item).map(_.toChar).mkString
+    }
     hashList.map(i => i.hash).contains(hash) match {
       case true => None
       case false => {

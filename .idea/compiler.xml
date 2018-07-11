@@ -16,4 +16,7 @@
       <module name="versioning" target="1.8" />
     </bytecodeTargetLevel>
   </component>
+  <component name="SbtSettings">
+    <option name="useApplicationSettings" value="false" />
+  </component>
 </project>

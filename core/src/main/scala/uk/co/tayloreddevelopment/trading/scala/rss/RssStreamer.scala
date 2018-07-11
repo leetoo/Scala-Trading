@@ -21,7 +21,7 @@ import org.htmlcleaner.HtmlCleaner
 
 import scala.collection.immutable
 
-case class RssItem(description:String, link:String)
+case class RssItem(key:String,description:String, link:String)
 
 
 object RssStreamer{
@@ -37,13 +37,13 @@ object RssStreamer{
     case Success(vn) => vn.flatten.map(r => {
       val cleanTag = cleaner.clean(r.description)
 
-      RssItem(cleanTag.getText.toString,r.link)
+      RssItem(r.key,cleanTag.getText.toString,r.link)
     })
     case Failure(ex) => throw ex
   }
 
 
-private def resolveNode(nodeSeq:NodeSeq) = nodeSeq.toVector.map(n =>   RssItem((n \ "title").text + " " + (n \ "description").text,(n \ "link").text ))
+private def resolveNode(nodeSeq:NodeSeq) = nodeSeq.toVector.map(n =>   RssItem("RSS" ,(n \ "title").text + " " + (n \ "description").text,(n \ "link").text ))
 private def getItems(xml:Node): Vector[NodeSeq] = Try{
 
   for (channel <- xml \\ "channel") yield {
@@ -59,7 +59,7 @@ private def getItems(xml:Node): Vector[NodeSeq] = Try{
   }
 }
 
-class RssStreamer(interval:Int, rssFeeds:Vector[String]) extends PollingRxStreamer[RssItem](interval){
+class RssStreamer(interval:Int, rssFeeds:Vector[String]) extends PollingRxStreamer[RssItem](interval,Some(r => r.description.take(25))){
   override protected def getData: Vector[RssItem] = for {
     feed <- rssFeeds
     item <- RssStreamer.getRss(feed)

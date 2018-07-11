@@ -10,9 +10,9 @@ import uk.co.tradingdevelopment.trading.scala.collections.HashValidator
 import scala.collection.immutable.Vector
 import scala.concurrent.Future
 //import scala.concurrent.ExecutionContext.Implicits.global
-abstract class PollingRxStreamer[A](interval: Int) extends RxStreamer[A] {
+abstract class PollingRxStreamer[A](interval: Int, hasher:Option[A => String]) extends RxStreamer[A] {
   protected def getData: Vector[A]
-  private lazy val validator = new HashValidator[A](interval,100)
+  private lazy val validator = new HashValidator[A](interval,100,hasher)
   lazy val stream:Observable[A] = {
     Observable(
       subscriber => {
