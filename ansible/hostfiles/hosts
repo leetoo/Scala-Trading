@@ -1,0 +1,7 @@
+[elk]
+127.0.0.1 ansible_ssh_user={{td_install_user}} ansible_ssh_pass={{td_install_password}} ansible_sudo_pass={{td_install_password}}
+
+[trading]
+127.0.0.1 ansible_ssh_user={{td_install_user}} ansible_ssh_pass={{td_install_password}} ansible_sudo_pass={{td_install_password}}
+
+

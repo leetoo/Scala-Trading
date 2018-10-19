@@ -1,0 +1,53 @@
+--- 
+- name: "import Logstash Search Repo key"
+  become: yes
+  become_user: "{{td_install_user}}"
+  action: "rpm_key key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present"
+  
+- name: "Set up Logstash repo | Use repo template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: /{{item}}
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/yum.repos.d/logstash.repo
+    
+- name: "Install logstash package"
+  action: "yum name=logstash state=installed"
+  become: yes
+  become_user: "{{td_install_user}}"
+
+- name: "Setup Logstash - stop logstash if present"
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  systemd: "name=logstash state=stopped"
+
+- name: "Deploy td logstash conf | Use conf template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template: 
+    src: "{{item}}.j2"
+    dest: "/{{item}}"
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/logstash/conf.d/td.conf
+    
+- name: 'logstash | Open Connection Ports'
+  become: yes
+  become_user: "{{td_install_user}}"
+  when: td_firewalld_open_ports == true
+  firewalld:
+    port: 5043-5044/tcp
+    permanent: true
+    state: enabled 
+    
+- name: "Setup Logstash - enable logstash"
+  become: yes
+  become_user: "{{td_install_user}}"
+  systemd: "name=logstash state=started enabled=yes"
+  

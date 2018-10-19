@@ -1,0 +1,30 @@
+---
+- name: 'CentOS | Download Expect'
+  become: yes
+  become_user: "{{td_install_user}}"
+  get_url:
+    url: "{{centos_mirror}}{{centos_expect_archive}}"
+    dest: "{{td_temp_directory}}{{centos_expect_archive}}"
+    mode: 0644
+
+- name: 'CentOS | Download Java Development'
+  become: yes
+  become_user: "{{td_install_user}}"
+  get_url:
+    url: "{{centos_mirror}}{{centos_java_devel_archive}}"
+    dest: "{{td_temp_directory}}{{centos_java_devel_archive}}"
+    mode: 0644
+
+- name: CentOS | Install Expect Package
+  become: yes
+  become_user: "{{td_install_user}}"
+  yum:
+    name: '{{td_temp_directory}}{{centos_expect_archive}}'
+    state: present
+
+- name: CentOS | Install Java Development Package
+  become: yes
+  become_user: "{{td_install_user}}"
+  yum:
+    name: '{{td_temp_directory}}{{centos_java_devel_archive}}'
+    state: present

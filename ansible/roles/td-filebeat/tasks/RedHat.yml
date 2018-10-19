@@ -1,0 +1,46 @@
+--- 
+- name: "import Filebeat Search Repo key"
+  become: yes
+  become_user: "{{td_install_user}}"
+  action: "rpm_key key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present"
+  
+- name: "Set up Filebeat repo | Use repo template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: /{{item}}
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/yum.repos.d/filebeat.repo
+    
+- name: "Install filebeat search package"
+  become: yes
+  become_user: "{{td_install_user}}"
+  action: "yum name=filebeat state=installed"
+    
+- name: "Setup filebeat - stop filebeat if already installed"
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  service: "name=filebeat state=stopped"
+
+- name: "Deploy td filebeat yml | Use yml template"
+  become: true
+  become_user: "{{td_install_user}}"
+  vars:
+      filebeat_servers: "{{ groups['elk'] }}"
+  template:
+    src: "{{item}}.j2"
+    dest: "/{{item}}"
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/filebeat/filebeat.yml
+    
+- name: "Setup filebeat - enable filebeat"
+  become: yes
+  become_user: "{{td_install_user}}"
+  service: "name=filebeat state=started enabled=yes"
+  

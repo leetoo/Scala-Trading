@@ -1,0 +1,29 @@
+--- 
+- hosts: elk
+  remote_user: "{{td_install_user}}"
+  tasks:
+  - name: include vars
+    include_vars: "group_vars/all"
+  roles:
+  - td-elasticsearch
+  - td-logstash
+  - td-kibana
+ 
+- hosts: all
+  remote_user: "{{td_install_user}}"
+  tasks:
+  - name: include vars
+    include_vars: "group_vars/all"
+  roles:
+  - td-kafka
+  - td-common
+ 
+
+- hosts: trading
+  remote_user: "{{td_install_user}}"
+  tasks:
+  - name: include vars
+    include_vars: "group_vars/all"
+  roles:
+  - td-filebeat
+  - td-metricbeat

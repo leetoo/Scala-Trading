@@ -1,0 +1,53 @@
+---
+- name: "import Elastic Search Repo key"
+  action: "rpm_key key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present"
+  become: yes
+  become_user: "{{td_install_user}}"
+  
+- name: "Set up elasticsearch repo | Use repo template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: /{{item}}
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/yum.repos.d/elasticsearch.repo
+    
+- name: "Install elastic search package"
+  action: "yum name=elasticsearch state=installed"
+  become: yes
+  become_user: "{{td_install_user}}"
+  
+- name: "Setup Elastic search - stop elasticsearch if already installed"
+  service: "name=elasticsearch state=stopped"
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+ 
+- name: "Deploy td elasticsearch conf | Use conf template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: "/{{item}}"
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/elasticsearch/elasticsearch.yml
+
+    
+- name: 'Elastic search | Open Connection Ports'
+  become: yes
+  become_user: "{{td_install_user}}"
+  when: td_firewalld_open_ports == true
+  firewalld:
+    port: 9200-9300/tcp
+    permanent: true
+    state: enabled     
+  
+- name: "Setup Elastic search - enable elasticsearch"
+  service: "name=elasticsearch state=started enabled=yes"
+  become: yes
+  become_user: "{{td_install_user}}"

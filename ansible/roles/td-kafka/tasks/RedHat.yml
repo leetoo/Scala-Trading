@@ -1,0 +1,105 @@
+---
+- name: 'Kafka | Download Kafka (Remote)'
+  become: yes
+  become_user: "{{td_install_user}}"
+  get_url:
+    url: "{{td_kafka_url}}"
+    dest: "{{td_temp_directory}}{{td_kafka_tgz}}"
+    mode: 0644
+
+- name: Kafka | Stop if alreay installed
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  shell: systemctl stop kafkacluster
+  
+- name: Kafka | Make sure the directory to hold the binaries is present
+  file:
+    path: "{{td_install_path}}"
+    state: directory
+
+- name: Kafka | Install Expect
+  action: "yum name=expect state=installed"
+  ignore_errors: yes
+  become: yes
+  become_user: "{{td_install_user}}"
+
+
+- name: Kafka | Unpack the compressed binaries
+  become: yes
+  become_user: "{{td_install_user}}"
+  unarchive:
+    dest: "{{td_install_path}}"
+    src: "{{td_temp_directory}}{{td_kafka_tgz}}"
+    remote_src: True
+   
+    
+- name: Kafka | Set Config And Scripts
+  become: yes
+  become_user: "{{td_install_user}}"
+  vars:
+      kafka_servers: "{{ groups['all'] }}"
+  with_items:
+    - config/server.properties
+  template:
+    src: "{{item}}.j2"
+    dest: "{{td_kafka_target_dir}}/{{item}}"
+    mode: 0644  
+    force: yes
+
+
+- name: Kafka | Open Connection Ports
+  become: yes
+  become_user: "{{td_install_user}}"
+  when: td_firewalld_open_ports == true
+  firewalld:
+    port: 9092/tcp
+    permanent: true
+    state: enabled 
+
+- name: Kafka | Set Kafka Home
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  command: export KAFKA_HOME={{td_kafka_target_dir}}
+  
+
+- name: Kafka | Install servicefile script to systemd'
+  become: yes
+  become_user: "{{td_install_user}}"
+  with_items:
+    - usr/lib/systemd/system/kafkacluster.service
+  template:
+    src: "{{item}}.j2"
+    dest: /{{item}}
+    mode: 0644
+    force: yes
+
+
+- name: Kafka | Reload systemd
+  become: yes
+  become_user: "{{td_install_user}}"
+  shell: systemctl daemon-reload
+
+
+- name: Kafka | Enable Services
+  become: yes
+  become_user: "{{td_install_user}}"
+  with_items:
+    - kafkacluster
+  shell: systemctl enable {{item}}
+  
+- name: Kafka | Start Cluster
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  shell: systemctl start kafkacluster
+
+- name: Kafka | Wait for Spark Master to spin up
+  pause:
+    seconds: 10
+
+- name: Kafka | Status
+  become: yes
+  become_user: "{{td_install_user}}"
+  shell: systemctl status kafkacluster

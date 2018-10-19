@@ -17,7 +17,7 @@ val sub =  new KafkaSubscriber(KafkaServers("localhost:9092","localhost:2181"),
   "rawtweets",60, r => {
     println("TWEET RECEIVED " + r.key())
 
-    filterProcessingActor !  Filter(r.key(),"<KAFKA>",r.value())
+    filterProcessingActor !  Filter(r.key(),"KAFKA",r.value())
 
   })
 

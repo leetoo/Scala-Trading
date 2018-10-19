@@ -39,11 +39,13 @@ object RssStreamer{
 
       RssItem(r.key,cleanTag.getText.toString,r.link)
     })
-    case Failure(ex) => throw ex
+    case Failure(ex) => {
+      println("Exception: => " + ex)
+      throw ex}
   }
 
 
-private def resolveNode(nodeSeq:NodeSeq) = nodeSeq.toVector.map(n =>   RssItem("RSS" ,(n \ "title").text + " " + (n \ "description").text,(n \ "link").text ))
+private def resolveNode(nodeSeq:NodeSeq) = nodeSeq.toVector.map(n =>   RssItem("RSS" ,(n \ "title").text +  " :: " + (n \ "description").text,(n \ "link").text ))
 private def getItems(xml:Node): Vector[NodeSeq] = Try{
 
   for (channel <- xml \\ "channel") yield {
@@ -53,13 +55,20 @@ private def getItems(xml:Node): Vector[NodeSeq] = Try{
   case Success(x) => x.toVector
   case Failure(ex) => throw ex
 }
+
+
+
   private def loadUrl(url:String) =Try( XML.load(new URL(url))) match {
-    case Success(e) =>e
-    case Failure(ex) => throw ex
+    case Success(e) =>{
+      e
+    }
+    case Failure(ex) => {
+      throw ex
+    }
   }
 }
 
-class RssStreamer(interval:Int, rssFeeds:Vector[String]) extends PollingRxStreamer[RssItem](interval,Some(r => r.description.take(25))){
+class RssStreamer(interval:Int, rssFeeds:Vector[String]) extends PollingRxStreamer[RssItem](interval,Some(r => r.description)){
   override protected def getData: Vector[RssItem] = for {
     feed <- rssFeeds
     item <- RssStreamer.getRss(feed)

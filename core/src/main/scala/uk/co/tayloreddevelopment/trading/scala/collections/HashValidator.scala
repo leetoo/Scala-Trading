@@ -24,7 +24,7 @@ class HashValidator[A](expiryMinutes: Int, historyScale:Int, hasher:Option[A => 
       case false => {
         println(s"$hash not found adding to hash list")
         hashList = HashStamp(timeStamp, hash) +: reduced
-        println(s"$hash not found adding to hash list " + hashList)
+        println(s"$hash not found adding to hash list " + HashStamp(timeStamp, hash.take(25)))
         Some(item)
       }
     }

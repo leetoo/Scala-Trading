@@ -1,0 +1,45 @@
+input {
+ beats {
+    port => 5044
+  }
+}
+
+filter {
+    grok {
+         match => { "message" => "%{DATA:timestamp} %{DATA:host} %{DATA:logger} - %{GREEDYDATA:payload}" }
+        remove_field => [ "message" ]
+     
+    }
+	
+	date {
+	match => ["timestamp","dd-MM-YY hh:mm:ss"]
+	}
+	
+	 json {
+    source => "payload"
+	remove_field => [ "payload" ]
+  }
+
+	if "_grokparsefailure" in [tags] {
+		grok {
+			match => [ 
+			    "message", "(?m)\[%{TIMESTAMP_ISO8601:timestamp}\] \[%{HOSTNAME:host}\] \[%{DATA:thread}\] %{LOGLEVEL:logLevel} %{DATA:class}@%{DATA:method}:%{DATA:line} \- (?<message>(.|\r|\n)*)" 
+		    ]
+			overwrite => [ 
+			    "host",
+			    "message" 
+		    ]
+			add_field => { 
+			    "code" => "%{class}@%{method}:%{line}"
+		    }
+		}
+	}
+}
+
+output {
+     elasticsearch {
+        hosts => "{{ inventory_hostname }}:9200"
+        index => "td_logs"
+      }
+
+}

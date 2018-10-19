@@ -32,7 +32,17 @@ object News extends App {
 
 
   tweetActor ! SubscribeToTwitter(true)
-  rssActor ! SubscribeToRss(Vector("http://lse.einnews.com/rss/bia3tK9kGDSwNBad"))
+  rssActor ! SubscribeToRss(
+    Vector("http://lse.einnews.com/rss/bia3tK9kGDSwNBad",
+      "http://www.prnewswire.co.uk/rss/all-news-releases-from-PR-newswire-news.rss",
+      "http://www.prnewswire.co.uk/rss/news-for-investors-from-PR-Newswire-news.rss",
+      "http://www.prnewswire.co.uk/rss/financial-services/earnings-forecasts-projections-news.rss",
+      "http://www.prnewswire.co.uk/rss/financial-services/all-financial-services-news.rss",
+    //  "https://www.investegate.co.uk/Rss.aspx?type=2",
+     // "https://www.investegate.co.uk/Rss.aspx?type=32",
+     // "https://www.investegate.co.uk/Rss.aspx?type=4",
+     // "https://www.investegate.co.uk/Rss.aspx?type=1",
+      "http://feeds.bbci.co.uk/news/business/companies/rss.xml"))
 
   println("Press any key to quit")
   val input = readLine

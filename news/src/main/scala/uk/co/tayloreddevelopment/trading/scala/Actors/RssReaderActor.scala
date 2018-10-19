@@ -14,9 +14,9 @@ class RssReaderActor extends Actor {
 
   val filterProcessingActor: ActorRef = this.context.actorOf(Props[TagFilterActor])
   override def receive: Receive = {
-    case x:SubscribeToRss => val rssStream = new RssStreamer(60,x.feeds)
+    case x:SubscribeToRss => val rssStream = new RssStreamer(5 * 60,x.feeds)
       rssStream.start.subscribe(i =>{
-        filterProcessingActor ! Filter(i.key,"<RSS>", Vector(i.description,i.link).mkString(" "))
+        filterProcessingActor ! Filter(i.key,"RSS", Vector(i.description,i.link).mkString(" "))
 
       } )
     case _ => println("I don't know how to process this message")

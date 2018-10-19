@@ -117,7 +117,8 @@ lazy val commonSettings = Seq(
   libraryDependencies += "org.scalactic" %% "scalactic" % "3.0.0",
   libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.0",
   libraryDependencies += "io.reactivex" %% "rxscala" % "0.26.5",
-  libraryDependencies +=  "com.danielasfregola" %% "twitter4s" % "5.5"
+  libraryDependencies +=  "com.danielasfregola" %% "twitter4s" % "5.5",
+  libraryDependencies += "rome" % "rome" % "1.0"
 )
 
 lazy val packageSettings = Seq(

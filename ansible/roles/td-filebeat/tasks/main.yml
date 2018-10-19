@@ -1,0 +1,11 @@
+---
+
+- name: 'Echo OS Family'
+  become: yes
+  become_user: "{{td_install_user}}"
+  debug:
+    var: ansible_os_family
+    
+- include: RedHat.yml
+  when: ansible_os_family == 'RedHat'
+ 

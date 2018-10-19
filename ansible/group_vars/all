@@ -1,0 +1,57 @@
+# The global variable file for fraXses gateway installation
+
+
+# THESE VARIABLES NEED TO BE ABSOLUTELY CORRECT **BEFORE** RUNNING THE ANSIBLE SCRIPT
+
+td_ver : 18.10.11
+
+td_install_user : root
+td_install_password : td
+td_install_path: /var/tdtrading/
+td_temp_directory: /tmp/
+td_firewalld_open_ports: false
+
+java_home: "/usr/lib/jvm/jre"
+
+#Release Repository
+td_release_rep_username : ext_ftp_user 
+td_release_rep_password : g4Jf6b
+td_release_rep_internal : "ftp://{{td_release_rep_username}}:{{td_release_rep_password}}@192.168.30.2/Fraxses"
+td_release_rep_remote : "ftp://{{td_release_rep_username}}:{{td_release_rep_password}}@213.120.216.158/Fraxses"
+td_release_branch_path : "{{td_ver_name}}"
+td_release_metadata_path : "METADATA"
+
+
+#ELK Manual Install Items
+elasticsearch_version : 6.3.1
+logstash_version : "{{elasticsearch_version}}"
+kibana_version : "{{elasticsearch_version}}"
+logstash_version : "{{elasticsearch_version}}"
+filebeat_version : "{{elasticsearch_version}}"
+heartbeat_version : "{{elasticsearch_version}}"
+metricbeat_version : "{{elasticsearch_version}}"
+hearbeat_schedule : "@every 600s"
+
+#Common
+centos_expect_package : 'expect'
+centos_expect_archive : '{{centos_expect_package}}-5.45-14.el7_1.x86_64.rpm'
+centos_java_devel_package : 'java-1.8.0-openjdk-devel'
+centos_java_devel_archive : '{{centos_java_devel_package}}-1.8.0.161-2.b14.el7.x86_64.rpm'
+centos_mirror : 'http://mirror.centos.org/centos/7/os/x86_64/Packages/'
+maven_central_repo : 'http://central.maven.org/maven2'
+
+#Kafka
+td_kafka_name : 'kafka'
+td_kafka_ver : '1.0.0'
+td_kafka_file_name: '{{td_kafka_name}}_{{td_scala_version}}-{{td_kafka_ver}}'
+td_kafka_tgz : '{{td_kafka_file_name}}.tgz'
+td_kafka_mirror_url : http://mirror.ox.ac.uk/sites/rsync.apache.org
+td_kafka_url : '{{td_kafka_mirror_url}}/{{td_kafka_name}}/{{td_kafka_ver}}/{{td_kafka_tgz}}'
+td_kafka_target_dir : '{{td_install_path}}{{td_kafka_file_name}}'
+td_kafka_topic_partitions : 10
+td_kafka_topic_replication : 1
+
+#Standard Install Paths
+td_release_rep_path_local : "{{td_local_install_path}}/{{td_service_name}}.zip"
+td_release_target_path_linux : "{{td_install_path}}"
+td_release_target_path_service : "{{td_release_target_path_linux}}{{td_service_package_name}}"

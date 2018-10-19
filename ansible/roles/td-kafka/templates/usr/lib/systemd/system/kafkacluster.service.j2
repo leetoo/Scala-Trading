@@ -1,0 +1,13 @@
+[Unit]
+Description=Apache Kafka
+After=network.target
+After=zookeeper.service
+
+[Service]
+Type=simple
+ExecStart={{fraxses_kafka_target_dir}}/bin/kafka-server-start.sh {{fraxses_kafka_target_dir}}/config/server.properties
+Restart=always
+SyslogIdentifier=kafka
+ 
+[Install]
+WantedBy=multi-user.target

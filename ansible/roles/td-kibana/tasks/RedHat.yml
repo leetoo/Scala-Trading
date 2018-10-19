@@ -1,0 +1,57 @@
+--- 
+- name: "import Kibana Search Repo key"
+  become: yes
+  become_user: "{{td_install_user}}"
+  action: "rpm_key key=https://artifacts.elastic.co/GPG-KEY-elasticsearch state=present"
+  
+- name: "Set up Kibana repo | Use repo template"
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: /{{item}}
+    mode: 0644
+    force: yes
+  with_items: 
+    - etc/yum.repos.d/kibana.repo
+    
+- name: "Install kibana search package"
+  become: yes
+  become_user: "{{td_install_user}}"
+  action: "yum name=kibana state=installed"
+- name: Kibana | stop kibana if present
+  become: yes
+  become_user: "{{td_install_user}}"
+  ignore_errors: yes
+  service: "name=kibana state=stopped"
+
+- name: Kibana | Deploy td kibana yml
+  become: true
+  become_user: "{{td_install_user}}"
+  template:
+    src: "{{item}}.j2"
+    dest: "/{{item}}"
+    mode: 0644
+    force: yes
+  with_items:
+    - etc/kibana/kibana.yml
+
+- name: Kibana | Open Connection Ports
+  become: yes
+  become_user: "{{td_install_user}}"
+  when: td_firewalld_open_ports == true
+  firewalld:
+    port: 5601/tcp
+    permanent: true
+    state: enabled
+
+- name: Kibana |  Reload systemd
+  become: yes
+  become_user: "{{td_install_user}}"
+  shell: systemctl daemon-reload
+
+- name: Kibana | enable kibana
+  become: yes
+  become_user: "{{td_install_user}}"
+  service: "name=kibana state=started enabled=yes"
+  

@@ -57,7 +57,9 @@ class TwitterActor extends Actor {
     "@CityAM",
     "@ReutersBiz",
     "@ForexLive",
-    "@nikolaslippmann"
+    "@nikolaslippmann",
+    "@TheFCA",
+    "@UKFtweets"
   )
 
   val filterProcessingActor: ActorRef =
@@ -80,7 +82,7 @@ class TwitterActor extends Actor {
                     filterProcessingActor !  Filter(tweet.user match {
                       case Some(u) => u.screen_name
                       case None    => "unknown"
-                    },"<TWITTER>",tweet.text)
+                    },"TWITTER",tweet.text)
 
 //
 //                  case false => ()

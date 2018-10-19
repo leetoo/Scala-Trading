@@ -15,7 +15,7 @@ class NotificationActor extends Actor {
 
   override def receive: Receive = {
     case x: NotifySentiment =>
-      client.Notify(s"${x.filter} was ${x.sentiment.toString} :${x.source}  + ${x.key} ",x.text, x.links,High)
+      client.Notify(s"${x.filter} was ${x.sentiment.toString} :${x.key} via ${x.source}",x.text, x.links,High)
 
     case _ => println("I don't know how to process this message")
   }

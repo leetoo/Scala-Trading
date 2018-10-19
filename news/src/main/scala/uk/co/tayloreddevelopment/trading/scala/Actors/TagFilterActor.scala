@@ -14,9 +14,9 @@ class TagFilterActor extends Actor {
   protected lazy val conf: Config = ConfigFactory.load()
 
   lazy val tagsItems = Vector(
-    Watched("Bitcoin","BTC"),
-    Watched("Etherium","ETH"),
-    Watched("Litecoin","LTC"),
+    //Watched("Bitcoin","BTC"),
+    //Watched("Etherium","ETH"),
+    //Watched("Litecoin","LTC"),
     Watched("Ocado","OCDO"),
     Watched("Sainsbury","SBRY"),
     Watched("Tesco","TSCO"),
@@ -82,7 +82,27 @@ class TagFilterActor extends Actor {
     Watched("Dixons Carphone","DC."),
     Watched("CYBG","CYBG"),
     Watched("Man Group","EMG"),
-    Watched("Virgin Money","VM.")
+    Watched("Virgin Money","VM."),
+    Watched("Computacenter","CCC"),
+    Watched("Inmarsat","ISAT"),
+    Watched("Capita","CPI"),
+    Watched("ContourGlobal","GLO"),
+    Watched("William Hill","WMH"),
+    Watched("Ted Baker","TED"),
+    Watched("Autotrader","AUTO"),
+    Watched("Entertainment One","ETO"),
+    Watched("Intu Properties","INTU"),
+
+    Watched("Moneysupermarket","MONY"),
+    Watched("Interserve","IRV"),
+    Watched("Rank","RNK"),
+    Watched("Speedy Hire","SDY"),
+    Watched("Babcock","BAB"),
+    Watched("Circassia Pharmaceuticals","CIR"),
+    Watched("Carpetright","CPR"),
+    Watched("Debenhams ","DEB")
+
+
 
   )
 
