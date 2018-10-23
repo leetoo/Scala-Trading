@@ -14,15 +14,21 @@
             <option value="$PROJECT_DIR$/core/project" />
             <option value="$PROJECT_DIR$/deal" />
             <option value="$PROJECT_DIR$/deal/project" />
+            <option value="$PROJECT_DIR$/domain" />
+            <option value="$PROJECT_DIR$/domain/project" />
             <option value="$PROJECT_DIR$/evaluation" />
             <option value="$PROJECT_DIR$/evaluation/project" />
             <option value="$PROJECT_DIR$/news" />
             <option value="$PROJECT_DIR$/news/project" />
             <option value="$PROJECT_DIR$/order" />
             <option value="$PROJECT_DIR$/order/project" />
+            <option value="$PROJECT_DIR$/persistence" />
+            <option value="$PROJECT_DIR$/persistence/project" />
             <option value="$PROJECT_DIR$/pricing" />
             <option value="$PROJECT_DIR$/pricing/project" />
             <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/providers" />
+            <option value="$PROJECT_DIR$/providers/project" />
             <option value="$PROJECT_DIR$/strategy" />
             <option value="$PROJECT_DIR$/strategy/project" />
             <option value="$PROJECT_DIR$/trading" />
@@ -35,7 +41,7 @@
             <option value="$PROJECT_DIR$/versioning/project" />
           </set>
         </option>
-        <option name="sbtVersion" value="0.13.16" />
+        <option name="sbtVersion" value="1.2.4" />
         <option name="useAutoImport" value="true" />
       </SbtProjectSettings>
     </option>

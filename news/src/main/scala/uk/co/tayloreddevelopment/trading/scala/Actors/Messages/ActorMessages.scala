@@ -1,6 +1,6 @@
 package uk.co.tayloreddevelopment.trading.scala.news.actors.messages
 
-import uk.co.tradingdevelopment.trading.scala.sentiment.Sentiment
+import uk.co.tradingdevelopment.trading.core.sentiment.Sentiment
 case class SubscribeToTwitter(start: Boolean)
 case class SubscribeToKafta(start:Boolean)
 case class SubscribeToRss(feeds:Vector[String])

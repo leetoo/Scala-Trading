@@ -1,4 +1,4 @@
-package uk.co.tradingdevelopment.trading.scala
+package uk.co.tradingdevelopment.trading.core
 
 import akka.NotUsed
 import com.lightbend.lagom.scaladsl.api.ServiceCall

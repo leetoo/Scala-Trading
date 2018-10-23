@@ -1,0 +1,4 @@
+[error] E:\Dev\GitHub\Scala-Trading\project\Dependencies.scala:47:71: ';' expected but ',' found.
+[error]   libraryDependencies +=  "com.danielasfregola" %% "twitter4s" % "5.5",
+[error]                                                                       ^
+[error] one error found

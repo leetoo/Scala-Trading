@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="trading_scala_3851" />
-    <profile name="sbt 2" modules="strategy,backtest,trading,deal,evaluation,versioning,valuation,tradingApi,pricing,core,order,news">
+    <profile name="sbt 2" modules="evaluation,deal,backtest,trading,core,providers,news,tradingApi,domain,valuation,order,strategy,versioning,pricing,persistence">
       <option name="reflectiveCalls" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
@@ -25,7 +25,7 @@
         <plugin path="C:\Users\jason\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scalamacros\paradise_2.12.4\2.1.0\paradise_2.12.4-2.1.0.jar" />
       </plugins>
     </profile>
-    <profile name="sbt 4" modules="trading_scala">
+    <profile name="sbt 4" modules="trading_scala,scala-trading">
       <option name="reflectiveCalls" value="true" />
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />

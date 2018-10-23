@@ -8,14 +8,24 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core-build.iml" filepath="$PROJECT_DIR$/.idea/modules/core-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/deal.iml" filepath="$PROJECT_DIR$/.idea/modules/deal.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/deal-build.iml" filepath="$PROJECT_DIR$/.idea/modules/deal-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain-build.iml" filepath="$PROJECT_DIR$/.idea/modules/domain-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/evaluation-build.iml" filepath="$PROJECT_DIR$/.idea/modules/evaluation-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/news.iml" filepath="$PROJECT_DIR$/.idea/modules/news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/news.iml" filepath="$PROJECT_DIR$/.idea/modules/news.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/news-build.iml" filepath="$PROJECT_DIR$/.idea/modules/news-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/news-build.iml" filepath="$PROJECT_DIR$/.idea/modules/news-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order.iml" filepath="$PROJECT_DIR$/.idea/modules/order.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/order-build.iml" filepath="$PROJECT_DIR$/.idea/modules/order-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence-build.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/pricing-build.iml" filepath="$PROJECT_DIR$/.idea/modules/pricing-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/providers.iml" filepath="$PROJECT_DIR$/.idea/modules/providers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/providers-build.iml" filepath="$PROJECT_DIR$/.idea/modules/providers-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-trading.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-trading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scala-trading-build.iml" filepath="$PROJECT_DIR$/.idea/modules/scala-trading-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/strategy-build.iml" filepath="$PROJECT_DIR$/.idea/modules/strategy-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/trading.iml" filepath="$PROJECT_DIR$/.idea/modules/trading.iml" />

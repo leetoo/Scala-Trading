@@ -7,9 +7,9 @@ import com.typesafe.config.{Config, ConfigFactory}
 import play.api.libs.ws.ahc.AhcWSClient
 import reactivemongo.api.{DefaultDB, MongoConnection}
 import uk.co.tayloreddevelopment.trading.scala.twitter.TwitterItem
-import uk.co.tradingdevelopment.trading.scala.rss.RssItem
-import uk.co.tradingdevelopment.trading.scala.sentiment.CoreNLPSentiment
-import uk.co.tradingdevelopment.trading.scala.web.LinkProcessor
+import uk.co.tradingdevelopment.trading.core.rss.RssItem
+import uk.co.tradingdevelopment.trading.core.sentiment.CoreNLPSentiment
+import uk.co.tradingdevelopment.trading.core.web.LinkProcessor
 import  uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

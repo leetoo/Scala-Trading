@@ -1,4 +1,4 @@
-package uk.co.tradingdevelopment.trading.scala
+package uk.co.tradingdevelopment.trading.core
 
 
 import com.lightbend.lagom.scaladsl.server.{ LagomApplication, LagomApplicationContext, LagomApplicationLoader }

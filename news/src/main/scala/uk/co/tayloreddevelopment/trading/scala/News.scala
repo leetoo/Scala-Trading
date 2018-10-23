@@ -2,10 +2,10 @@ package uk.co.tayloreddevelopment.trading.scala.news
 
 import akka.actor.{ActorSystem, Props}
 import com.typesafe.config.{Config, ConfigFactory}
-import reactivemongo.api._
+
 import uk.co.tayloreddevelopment.trading.scala.news.actors._
 import uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
-import uk.co.tradingdevelopment.trading.scala.logging._
+import uk.co.tradingdevelopment.trading.core.logging._
 
 import scala.concurrent._
 import scala.concurrent.duration._

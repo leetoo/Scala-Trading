@@ -4,7 +4,7 @@ import akka.actor.{Actor, ActorRef, Props}
 import com.typesafe.config.{Config, ConfigFactory}
 import edu.stanford.nlp.pipeline.CoreNLPProtos
 import reactivemongo.api.{DefaultDB, MongoConnection}
-import uk.co.tradingdevelopment.trading.scala.sentiment.{CoreNLPSentiment, NaiveSentiment, SseSentiment}
+import uk.co.tradingdevelopment.trading.core.sentiment.{CoreNLPSentiment, NaiveSentiment, SseSentiment}
 import uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
 
 import scala.concurrent.ExecutionContext.Implicits.global

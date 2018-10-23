@@ -3,7 +3,7 @@ package uk.co.tayloreddevelopment.trading.scala.news.actors
 import akka.actor.{Actor, ActorRef, Props}
 import com.typesafe.config.{Config, ConfigFactory}
 import reactivemongo.api.{DefaultDB, MongoConnection}
-import uk.co.tradingdevelopment.trading.scala.rss.RssStreamer
+import uk.co.tradingdevelopment.trading.core.rss.RssStreamer
 import  uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

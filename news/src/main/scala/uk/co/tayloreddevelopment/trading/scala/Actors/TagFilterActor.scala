@@ -4,7 +4,7 @@ import akka.actor.{Actor, ActorRef, Props}
 import com.typesafe.config.{Config, ConfigFactory}
 import reactivemongo.api.{DefaultDB, MongoConnection}
 import uk.co.tayloreddevelopment.trading.scala.twitter.TwitterItem
-import uk.co.tradingdevelopment.trading.scala.domain.Watched
+import uk.co.tradingdevelopment.trading.core.domain.Watched
 import  uk.co.tayloreddevelopment.trading.scala.news.actors.messages._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
